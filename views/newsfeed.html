@@ -8,7 +8,7 @@
   <!-- Enlazamos nuestro framework _materialize_ -->
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
-  <link rel="stylesheet" href="../css/newsfeed.css">
+  <link rel="stylesheet" href="../css/main.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
   <!-- Enlazamos íconos de materialize -->
@@ -35,7 +35,7 @@
     <ul id="slide-out" class="side-nav">
       <li>
         <div class="user-view">
-          <div class="background" style="background-color: #3f393b"></div>
+          <div class="background" class="bkg-other-color"></div>
           <!-- Añadimos la imagen de perfil -->
           <a href="#!user">
             <img class="circle" src="images/user.jpg">
@@ -75,7 +75,7 @@
       <div class="col s12">
         <form>
           <div class="input-field">
-            <input id="search" type="search" required>
+            <input id="search" type="search" required placeholder="Busca la película con más movie UP´S" class="margin-left-40">
             <label class="label-icon" for="search">
               <i class="material-icons">search</i>
             </label>
@@ -84,15 +84,37 @@
         </form>
       </div>
     </div>
-    <div class="row">
-      <div class="col s4">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery">
+    <div class="row container-flex-row">
+      <div class="col s12 container-flex-column center-align">
+        <h4 id="title-nf"> Las  chispote- UP'S  de la Semana</h4>
       </div>
-      <div class="col s4">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery">
+    </div>
+    <div class="row container-flex-row">
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
       </div>
-      <div class="col s4">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery">
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
+      </div>
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
+      </div>
+    </div>
+    <div class="row container-flex-row">
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
+      </div>
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
+      </div>
+      <div class="col s4 container-flex-column">
+        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
+        <h6>Nombre Película</h6>
       </div>
     </div>
   </main>
@@ -101,18 +123,18 @@
     <div class="tab-menu-holder">
       <ul>
         <li class="tab-item-btn active col s4">
-          <a style="color:white" href="newsfeed.html">
+          <a href="newsfeed.html" class="color-white">
             <i class="material-icons">home</i>
           </a>
 
         </li>
         <li class="tab-item-btn col s4">
-          <a style="color:white" href="search.html">
+          <a href="search.html" class="color-white">
             <i class="material-icons">search</i>
           </a>
         </li>
         <li class="tab-item-btn col s4">
-          <a style="color:white" href="notifications.html">
+          <a class="color-white" href="notifications.html" class="color-white">
             <i class="material-icons">notifications</i>
           </a>
         </li>

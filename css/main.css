@@ -1,0 +1,84 @@
+/* ESTILOS GENERALES*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Estilos del navbar superior */
+.logo-principal {
+	margin-top: 6px;
+	width: 1.5em;
+}
+
+.background-nav {
+	background-color: #c71f16;
+}
+
+/* Estilos del navbar inferior   */
+.tab-menu-holder {
+	background: #c71f16;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	height: 56px;
+	z-index: 9999999;
+}
+
+.tab-menu-holder  ul {
+	text-align: center;
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.tab-menu-holder   li {
+	list-style: none;
+	display: inline;
+	padding: 10px 15px;
+	margin: 0 10px;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 20px;
+}
+
+.color-white{
+	color: white;
+}
+
+.bkg-other-color{
+	color: #3f393b;
+}
+
+.container-flex-row {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.container-flex-column {
+  display: flex;
+	flex-direction:column;
+  justify-content: center;
+	padding: 2em;
+}
+
+#search{
+	margin-left: 40px;
+}
+
+#title-nf{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/* FÍN DE ESTILOS GENERALES */
+
+
+
+/* ESTILOS PARA LA VISTA NEWSFEED*/
+.imgs-gallery{
+	max-width: 100%;
+}
+
+/*FÍN DE ESTILOS NEWSPEED */
