@@ -7,7 +7,7 @@
     <!-- Enlazamos nuestro framework _materialize_ -->
     <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
     <!-- Enlazamos nuestra hoja de estilo css -->
-    <link rel="stylesheet" href="../css/newsfeed.css">
+    <link rel="stylesheet" href="../css/main.css">
     <!-- Enlazamos nuestro logo -->
     <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
     <!-- Enlazamos íconos de materialize -->
@@ -17,76 +17,82 @@
 <body>
     <!-- Barra de navegación para todas las vistas -->
     <header>
-        <nav class="background-nav">
-            <div class="nav-wrapper">
-                <!-- Añadimos nuestro logo -->
-                <a href="#" class="brand-logo"><img src="../assets/img/img-logo/logo-title.png" class="responsive-img logo-principal" alt=""></a>
-                <!-- Añadimos la foto del perfil -->
-                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">Photo</i></a>
+      <nav class="background-nav">
+        <div class="nav-wrapper">
+          <!-- Añadimos nuestro logo -->
+          <a href="#" class="brand-logo">
+            <img src="../assets/img/img-logo/logo-title.png" class="responsive-img logo-principal" alt="">
+          </a>
+          <!-- Añadimos la foto del perfil -->
+          <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+            <i class="material-icons">Photo</i>
+          </a>
+        </div>
+      </nav>
+      <!-- Añadimos el sidebar del perfil -->
+      <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="../assets/img/111.jpg" class="responsive-img" alt="">
             </div>
-        </nav>
-        <!-- Añadimos el sidebar del perfil -->
-        <ul id="slide-out" class="side-nav">
-            <li>
-                <div class="user-view">
-                    <div class="background" style="background-color: #3f393b"></div>
-                    <!-- Añadimos la imagen de perfil -->
-                    <a href="#!user">
-                        <img class="circle" src="images/user.jpg">
-                    </a>
-                    <a href="#!name">
-                        <span class="white-text name">Nombre del usuario</span>
-                    </a>
-                    <a href="#!email">
-                        <span class="white-text email">Correo del usuario</span>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <a href="#!">
-                    <i class="material-icons">account_circle</i>Mi Perfil</a>
-            </li>
-            <li>
-                <a href="#!">
-                    <i class="material-icons">supervisor_account</i>Seguidores</a>
-            </li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li>
-                <a class="subheader">
-                    <i class="material-icons">build</i>Ajustes y Configuración</a>
-            </li>
-            <li>
-                <a class="waves-effect" href="#!">
-                    <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
-            </li>
-        </ul>
+            <!-- Añadimos la imagen de perfil -->
+            <a href="#!user">
+              <img class="circle" src="images/user.jpg">
+            </a>
+            <a href="#!name">
+              <span class="white-text name">Nombre del usuario</span>
+            </a>
+            <a href="#!email">
+              <span class="white-text email">Correo del usuario</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="#!">
+            <i class="material-icons">account_circle</i>Mi Perfil</a>
+        </li>
+        <li>
+          <a href="#!">
+            <i class="material-icons">supervisor_account</i>Seguidores</a>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li>
+          <a class="subheader">
+            <i class="material-icons">build</i>Ajustes y Configuración</a>
+        </li>
+        <li>
+          <a class="waves-effect" href="#!">
+            <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+        </li>
+      </ul>
     </header>
     <main>
         <div class="newsfeed"></div>
     </main>
     <footer>
-            <div class="tab-menu-holder">
-                    <ul>
-                      <li class="tab-item-btn active col s4">
-                        <a style="color:white" href="newsfeed.html">
-                            <i class="material-icons">home</i>
-                        </a>
-                
-                      </li>
-                      <li class="tab-item-btn col s4">
-                        <a style="color:white" href="search.html">
-                            <i class="material-icons">search</i>
-                        </a>
-                      </li>
-                      <li class="tab-item-btn col s4">
-                        <a style="color:white" href="notifications.html">
-                            <i class="material-icons">notifications</i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+      <div class="tab-menu-holder">
+        <ul>
+          <li class="tab-item-btn active col s4">
+            <a style="color:white" href="newsfeed.html">
+              <i class="material-icons">home</i>
+            </a>
+    
+          </li>
+          <li class="tab-item-btn col s4">
+            <a style="color:white" href="search.html">
+              <i class="material-icons">search</i>
+            </a>
+          </li>
+          <li class="tab-item-btn col s4">
+            <a style="color:white" href="notifications.html">
+              <i class="material-icons">notifications</i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
