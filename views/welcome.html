@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Enlazamos nuestro framework _materialize_ -->
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+    <!-- Enlazamos nuestra hoja de estilo css -->
+    <link rel="stylesheet" href="../css/welcome.css">
+    <!-- Enlazamos nuestro logo -->
+    <link rel="shortcut icon" href="../assets/img/img-logo/logo-principal.png">
+    <!-- Enlazamos íconos de materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <nav class="background-nav">
+            <div class="nav-wrapper">
+                <!-- Añadimos nuestro logo -->
+                <a href="#" class="brand-logo">
+                    <img src="../assets/img/img-logo/logo-title.png" class="responsive-img logo-principal" alt="">
+                </a>
+                <!-- Añadimos la foto del perfil -->
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+                    <i class="material-icons">Photo</i>
+                </a>
+            </div>
+        </nav> 
+        <!-- Añadimos el sidebar del perfil -->
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="../assets/img/111.jpg" class="responsive-img" alt="">
+                    </div>
+                    <!-- Añadimos la imagen de perfil -->
+                    <a href="#!user">
+                        <img class="circle" src="images/user.jpg">
+                    </a>
+                    <a href="#!name">
+                        <span class="white-text name">Nombre del usuario</span>
+                    </a>
+                    <a href="#!email">
+                        <span class="white-text email">Correo del usuario</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#!">
+                    <i class="material-icons">account_circle</i>Mi Perfil</a>
+            </li>
+            <li>
+                <a href="#!">
+                    <i class="material-icons">supervisor_account</i>Seguidores</a>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li>
+                <a class="subheader">
+                    <i class="material-icons">build</i>Ajustes y Configuración</a>
+            </li>
+            <li>
+                <a class="waves-effect" href="#!">
+                    <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <div class="video-container">
+                                    <iframe width="320" height="auto" src="https://www.youtube.com/embed/DMilXF7ENps?rel=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-container">
+                                    <iframe width="320" height="562" src="https://www.youtube.com/embed/DMilXF7ENps?rel=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-container">
+                                    <iframe width="320" height="562" src="https://www.youtube.com/embed/DMilXF7ENps?rel=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="video-container">
+                                    <iframe width="320" height="562" src="https://www.youtube.com/embed/DMilXF7ENps?rel=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+        
+                </div>
+            </div>
+        </div>           
+        <div class="row">
+            <div class="col s12">
+            </div>
+            <h1>My Skills</h1>
+            <p>HTML</p>
+            <div class="chip">
+                <img src="../assets/img/img-logo/logo-principal.png" alt="Contact Person"> Jane Doe
+            </div>
+            <div class="container">
+                <div class="skills html">30%</div>
+            </div>
+        
+            <p>CSS</p>
+            <div class="container">
+                <div class="skills css">80%</div>
+            </div>
+        
+            <p>JavaScript</p>
+            <div class="container">
+                <div class="skills js">65%</div>
+            </div>
+        
+            <p>PHP</p>
+            <div class="container">
+                <div class="skills php">60%</div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="tab-menu-holder">
+            <ul>
+                <li class="tab-item-btn active col s4">
+                    <a style="color:white" href="newsfeed.html">
+                        <i class="material-icons">home</i>
+                    </a>
+    
+                </li>
+                <li class="tab-item-btn col s4">
+                    <a style="color:white" href="search.html">
+                        <i class="material-icons">search</i>
+                    </a>
+                </li>
+                <li class="tab-item-btn col s4">
+                    <a style="color:white" href="notifications.html">
+                        <i class="material-icons">notifications</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    
+
+    <!-- Enlazamos la librería Jquery -->
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Enlazamos el archivo jquery de materialize -->
+    <script src="../vendors/materialize/js/materialize.min.js"></script>
+    <!-- Enlazamos nuestro archivo JS -->
+    <script src="../js/welcome.js"></script>
+</body>
+
+</html>
