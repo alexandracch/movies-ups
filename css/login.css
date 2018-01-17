@@ -1,0 +1,34 @@
+/* body {
+    background-image: url('../assets/img/fondo.JPG');
+    width: 100vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-top: 20vh;
+}
+
+.button-div {
+    margin-top: 10vh;
+}
+/* Welcome */
+.btn, .btn-large, .btn-floating {
+    background-color: #D14736;
+}
+
+.welcome {
+    margin-top: 30vh;
+}
+
+.btn-floating {
+    margin-top: 8vh;
+}
