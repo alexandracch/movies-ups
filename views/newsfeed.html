@@ -33,16 +33,16 @@
     <ul id="slide-out" class="side-nav">
       <li>
         <div class="user-view">
-          <div class="background" class="bkg-other-color"></div>
+          <div id="background-profile" class="background" class="bkg-other-color"></div>
           <!-- Añadimos la imagen de perfil -->
-          <a href="#!user">
-            <img class="circle" src="images/user.jpg">
+          <a href="#user">
+            <img src="" alt="usuario" id="photo" class="cicle photo-user" style="">
           </a>
-          <a href="#!name">
-            <span class="white-text name">Nombre del usuario</span>
+          <a href="#name">
+            <span id="name" class="white-text name"></span>
           </a>
-          <a href="#!email">
-            <span class="white-text email">Correo del usuario</span>
+          <a href="#email">
+            <span id="email" class="white-text email"></span>
           </a>
         </div>
       </li>
@@ -115,7 +115,8 @@
       </div>
     </div>
   </main>
-  <footer>
+  <!-- Nav -->
+  <nav>
     <div class="tab-menu-holder">
       <ul>
         <li class="tab-item-btn active col s4">
@@ -136,12 +137,14 @@
         </li>
       </ul>
     </div>
-  </footer>
+  </nav>
+  <!-- Final nav -->
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="../js/newsfeed.js"></script>
 </body>
 </html>
