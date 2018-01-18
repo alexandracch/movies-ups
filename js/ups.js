@@ -62,12 +62,12 @@ $(document).ready(function() {
     console.log(commented.find('.message-box').length)
 
 
-    // var array = ['pera','fddd','ssss'];
-    // var  newArray = [];
-    // acum = 0;
-    // for (var i = 0; i < array.length; i++) { 
-    //   acum += array[i]; }
-    // alert(acum)
+    var array = ['pera','fddd','ssss'];
+    var  newArray = [];
+    acum = 0;
+    for (var i = 0; i < array.length; i++) { 
+      acum += array[i]; }
+    alert(acum)
 
   });
 
