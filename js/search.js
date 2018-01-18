@@ -14,31 +14,8 @@ $(document).ready(function() {
         if (posterMovie === 'N/A') {
           posterMovie = '../assets/img/noimg.png';
         }
-        var divMovie = $('<div class="left border">');
-        var imgPoster = $('<img src="' + posterMovie + '" width= 70px data-id ="' + idMovie + '">');
-        divMovie.append(movie.Title);
-        divMovie.append(imgPoster);
-        $('#movie-section').append(divMovie);
+        $('#movie-section').append('<div class="col s12 container-flex-column"><img id="movie" src="' + posterMovie + '" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie">' + movie.Title + '</h6></div>');
       }
-
-      // $('#peliculas div img').on('click', function() {
-      //   $('#click-movie').empty();
-      //   var dataIdMovie = $(this).data('id');
-      //   alert(dataIdMovie);
-      //   $.getJSON('https://www.omdbapi.com/?i=' + dataIdMovie + '&page=2&apikey=cde77cc6').then(function(response) {
-      //     var mTitle = response.Title;
-      //     var mPoster = $('<div><img  src="' + response.Poster + '"height=120px width= 70px data-id ="' + idMovie + '"></div>');
-      //     var mPlot = response.Plot;
-      //     var newDiv = $('<div>');
-      //     newDiv.append(mTitle);
-      //     newDiv.append(mPoster);
-      //     newDiv.append(mPlot);
-      //     $('#click-movie').append(newDiv);
-      //   });
-      // });
-      // para las paginas siguientes
-      // $.getJSON('http://www.omdbapi.com/?s=' + inputMovie + '&page=2&apikey=cde77cc6').then(function(responseJ) {
-      // console.log(responseJ);
     });
   });
 });
