@@ -90,6 +90,43 @@
         </ul>
       </div>
     </nav>
+    <!-- Añadimos el sidebar del perfil -->
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <div class="user-view">
+          <div id="background-profile" class="background" class="bkg-other-color"></div>
+          <!-- Añadimos la imagen de perfil -->
+          <a href="#user">
+            <img src="" alt="usuario" id="photo" class="cicle photo-user">
+          </a>
+          <a href="#name">
+            <span id="name" class="white-text name"></span>
+          </a>
+          <a href="#email">
+            <span id="email" class="white-text email"></span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a href="#!">
+          <i class="material-icons">account_circle</i>Mi Perfil</a>
+      </li>
+      <li>
+        <a href="#!">
+          <i class="material-icons">supervisor_account</i>Seguidores</a>
+      </li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li>
+        <a class="subheader">
+          <i class="material-icons">build</i>Ajustes y Configuración</a>
+      </li>
+      <li>
+        <a class="waves-effect" href="#!">
+          <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+      </li>
+    </ul>
   </header>
   <main>
     <div class="row">
@@ -160,12 +197,14 @@
         </li>
       </ul>
     </div>
-  </footer>
+  </nav>
+  <!-- Final nav -->
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="../js/newsfeed.js"></script>
 </body>
 </html>
