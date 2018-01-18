@@ -19,6 +19,17 @@ $(document).ready(function() {
       .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
   }, 600);
 
+  // Initialize Firebase
+  var config = {
+    apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
+    authDomain: 'movie-ups.firebaseapp.com',
+    databaseURL: 'https://movie-ups.firebaseio.com',
+    projectId: 'movie-ups',
+    storageBucket: 'movie-ups.appspot.com',
+    messagingSenderId: '1064902545731'
+  };
+  firebase.initializeApp(config);
+
   // Crando variables 
   var textArea = $('#area');
   var comment = $('#button');
@@ -37,16 +48,26 @@ $(document).ready(function() {
 
   // Utilizando el boton Comentar para pasar a otro contenedor
   comment.on('click', function() {
-    commented.append('<div  >' + textArea.val());
+    var nameUser = localStorage.name;
+    var $messages = '<div class="col s12 box">' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="div-name"><h4></h4></div>' + '<div class="message-box"><span></span></div>' + '</div>';
+    var appenReplace = $messages.replace('<span></span>', textArea.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
+    commented.append(appenReplace + textArea.val());
+    // guardar comentarios en firebase
+    firebase.database().ref('comments').push({
+      name: localStorage.name,
+      message: textArea.val()
+    });
     $('#area').val('');
-    commented.find('div');
-    console.log(commented.find('div'))
-    var array = ['pera','fddd','ssss'];
-    var  newArray = [];
-    acum = 0;
-    for (var i = 0; i < array.length; i++) { 
-      acum += array[i]; }
-    alert(acum)
+    commented.find('.message-box').length;
+    console.log(commented.find('.message-box').length)
+
+
+    // var array = ['pera','fddd','ssss'];
+    // var  newArray = [];
+    // acum = 0;
+    // for (var i = 0; i < array.length; i++) { 
+    //   acum += array[i]; }
+    // alert(acum)
 
   });
 
