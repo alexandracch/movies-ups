@@ -71,6 +71,7 @@ nav {
 
 #search{
 	margin-left: 40px;
+	width: 88%;
 }
 
 #title-nf{
@@ -83,7 +84,11 @@ nav {
 
 /* ESTILOS PARA LA VISTA NEWSFEED*/
 .imgs-gallery{
-	max-width: 100%;
+	width: 100%;
+}
+
+#container-movie-3{
+  margin-bottom: 60px;
 }
 
 /* Newsfeed */
