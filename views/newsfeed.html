@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +8,14 @@
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
   <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/ups.css">
+	<link rel="stylesheet" href="../assets/style.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
   <!-- Enlazamos íconos de materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>UP'S</title>
 </head>
-
 <body>
   <!-- Barra de navegación para todas las vistas -->
   <header>
@@ -57,16 +57,16 @@
           <li>
             <div class="user-view">
               <div class="background">
-                <img src="../assets/images/portada.jpg">
+                <img src="../assets/img/portada.jpg">
               </div>
               <a href="#!user">
-                <img class="circle foto-user" src="../assets/images/user.jpg">
+                <img id="photo" class="circle foto-user" src="">
               </a>
               <a href="#!name">
-                <span class="white-text name">John Doe</span>
+                <span class="white-text name" id="name"></span>
               </a>
               <a href="#!email">
-                <span class="white-text email">jdandturk@gmail.com</span>
+                <span id="email" class="white-text email"></span>
               </a>
             </div>
           </li>
@@ -86,7 +86,7 @@
               <i class="material-icons">build</i>Ajustes y Configuración</a>
           </li>
           <li>
-            <a class="waves-effect" href="#!">
+            <a id="logout" class="waves-effect" href="#!">
               <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
           </li>
         </ul>
@@ -133,6 +133,11 @@
   <main>
     <div class="row">
       <div class="col s12">
+          <div class="galery">
+            <div class="video-container carousel carousel-slider">
+                <a class="carousel-item" href="#one!"><iframe width="560" height="315" src="https://www.youtube.com/embed/0mauGhW74uM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></a>
+            </div>
+          </div>
       </div>
     </div>
     <div class="row container-flex-row">
@@ -152,13 +157,13 @@
   <!-- Modal -->
   <div id="modal-movie" class="modal">
     <div class="modal-content">
-      <i class="material-icons right modal-close">close</i>
+      <i class="material-icons right modal-close" id="btn-reload">close</i>
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="col s12 container-flex-column">
-              <!-- <img id="movie1" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
-              <h6 class=center-align id="name-movie1">Nombre Película</h6> -->
+              <img id="movie-img" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
+              <h6 class=center-align id="name-movie">Nombre Película</h6>
               <table class="responsive-table centered highlight">
                 <thead>
                   <tr>
@@ -220,5 +225,4 @@
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script src="../js/newsfeed.js"></script>
 </body>
-
 </html>

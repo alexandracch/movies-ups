@@ -78,6 +78,10 @@ nav {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+
+.margin-top-80{
+	margin-top: 80px;
+}
 /* FÍN DE ESTILOS GENERALES */
 
 
@@ -101,4 +105,27 @@ nav {
 
 #background-profile {
 	background-color: #c71f16;
+}
+
+/* Estilos para el slider de videos */
+.parallax-container {
+	height: 270px;
+}
+
+.galery {
+	margin-top: 4em;
+	width: auto;
+}
+
+.video-responsive {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 56.25%;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

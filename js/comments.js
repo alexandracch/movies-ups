@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -43,7 +43,7 @@ $(document).ready(function () {
   var $input = $('#autocomplete-input');
   var nameUser = localStorage.name;
   var $btnSend = $('#send');
-  var $chatUl = $('#messages-ul');
+  var $chatUl = $('#comments-ul');
   var $btnSendAttr = $('button[type=submit]');
 
   // para no dar comentarios vacios
@@ -59,22 +59,40 @@ $(document).ready(function () {
   $btnSend.on('click', function() {
     var nameUser = localStorage.name;
     var $inputVal = $input.val();
-    var $messages = '<div class="col s12 box">'+'<span>_name_<span>'+'<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>'+ '<div class="div-name"><h4></h4></div>'+'<div class="message-box"><span></span></div>'+'</div>';
-    var appenReplace = $messages.replace('<span></span>', $input.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
-    $('#messages').append(appenReplace);
+    var $comments = '<div class="col s12 box">' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="div-name"><h4></h4></div>' + '<div class="message-box"><span></span></div>' + '</div>';
+    var appenReplace = $comments.replace('<span></span>', $input.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
+    $('#comments').append(appenReplace);
   
-  // guardar comentarios en firebase
+    // guardar comentarios en firebase
     firebase.database().ref('comments').push({
       name: localStorage.name,
       message: $inputVal,
     });
     
     $inputVal = $input.val('');
-  // para que no se puedan volver a enviar comentarios en blanco
-    if ( $inputVal = $input.val('')) {
+    // para que no se puedan volver a enviar comentarios en blanco
+    if ($inputVal = $input.val('')) {
       $btnSendAttr.attr('disabled', true); // desabilita el boton
     }
   });
  
+  // para traer todos lo posteos que hizo
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var token = firebase.auth().currentUser.uid;
+      queryDataset(token);
+    }
+  });
   
+  firebase.database().ref('users').child(localStorage.uid).once('value').then(function(snapshot) {
+    var Postarray = snapshot.val();
+    var keys = Object.keys(Postarray);
+    for (var i = 0; i < keys.length; i++) {
+      var currentObject = Postarray[keys[i]];
+      arrayTraer[i] = currentObject.name;
+      arrayTraerFoto[i] = currentObject.photo;
+    }
+  });
+
+  // traer los comentarios anteriores del usuario
 });
