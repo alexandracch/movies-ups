@@ -12,7 +12,7 @@ $(document).ready(function() {
         var posterMovie = movie.Poster;
         var idMovie = movie.imdbID;
         if (posterMovie === 'N/A') {
-          posterMovie = 'assets/img/noimg.png';
+          posterMovie = '../assets/img/noimg.png';
         }
         var divMovie = $('<div class="left border">');
         var imgPoster = $('<img src="' + posterMovie + '" width= 70px data-id ="' + idMovie + '">');
