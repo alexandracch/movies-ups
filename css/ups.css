@@ -12,6 +12,8 @@
     padding-bottom: 56.25%;
     padding-top: 30px;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 }
 .contenedor iframe {
     height: 100%;
@@ -20,13 +22,38 @@
     top:0;
     width: 100%;
 }
-
-@media screen and (max-width: 1000px){
-    .col1,
-    .col2{
-     width: auto;
-    }
+/* Estilos para el titulo */
+.ranked{
+ text-align: center;
+ font-family: 'Joti One', cursive;
+ font-size: 20px;
+}
+.podium{
+ height: 28px;
+ width: 270px;
+ border-radius:18px;
+ margin-bottom:28px;
+ margin-left: 2%;
+ box-shadow:8px 1px 8px rgb(49, 49, 49) inset,8px 1px 8px white;
+}
+.icon{
+ color: rgb(0, 255, 85);
+ font-size: 18px;
+}
+.bar{
+    border-radius:15px;
+    height: 16px;
+    margin:1px 2px;
+    position: absolute;
+    box-shadow:8px 1px 8px white inset,8px 1px 8px rgb(49, 49, 49) ;
+}
+.user1{
+  background-color: rgb(117, 168, 245);
 }
 
-
-
+.user2{
+  background-color: rgb(245, 129, 216);
+}
+.user3{
+  background-color: rgb(243, 126, 105);
+}
