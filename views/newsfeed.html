@@ -36,7 +36,7 @@
           <div class="background" class="bkg-other-color"></div>
           <!-- Añadimos la imagen de perfil -->
           <a href="#!user">
-            <img class="circle" src="images/user.jpg">
+            <img class="circle" src="../assets/img/user.jpg">
           </a>
           <a href="#!name">
             <span class="white-text name">Nombre del usuario</span>
@@ -70,51 +70,63 @@
   <main>
     <div class="row">
       <div class="col s12">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required placeholder="Busca la película con más movie UP´S" class="margin-left-40">
-            <label class="label-icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
       </div>
     </div>
     <div class="row container-flex-row">
       <div class="col s12 container-flex-column center-align">
-        <h4 id="title-nf"> Las  chispote- UP'S  de la Semana</h4>
+        <h4 id="title-nf"> Las chispote- UP'S de la Semana</h4>
       </div>
     </div>
-    <div class="row container-flex-row">
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
+    <div class="row container-flex-row" id="container-movie-1">
     </div>
-    <div class="row container-flex-row">
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
-      <div class="col s4 container-flex-column">
-        <img src="../assets/img/descarga.jpg" alt="imagen" class="imgs-gallery responsive-img materialboxed">
-        <h6>Nombre Película</h6>
-      </div>
+    <div class="row container-flex-row" id="container-movie-2">
     </div>
+    <div class="row container-flex-row" id="container-movie-3">
+    </div>
+
+    <!-- <div class="row container-flex-row" id="container-movie-4">
+    </div> -->
   </main>
+  <!-- Modal -->
+  <div id="modal-movie" class="modal">
+    <div class="modal-content">
+      <i class="material-icons right modal-close">close</i>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="col s12 container-flex-column">
+              <img id="movie1" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
+              <h6 class=center-align id="name-movie1">Nombre Película</h6>
+              <table class="responsive-table centered highlight">
+                <thead>
+                  <tr>
+                    <th>Año</th>
+                    <th>Duración</th>
+                    <th>Reparto</th>
+                    <th>Género</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="td-year">1998</td>
+                    <td id="td-time">155mm</td>
+                    <td id="td-repart">nnnn</td>
+                    <td id="td-genre">Administración</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12  m12 l12 xl12">
+              <a class="btn display-block" id="btn-signup">Ver Episodio</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- fin Modal -->
   <footer>
     <div class="tab-menu-holder">
       <ul>
@@ -144,4 +156,5 @@
   <!-- Enlazamos nuestro archivo JS -->
   <script src="../js/newsfeed.js"></script>
 </body>
+
 </html>
