@@ -30,7 +30,7 @@
 }
 .podium{
  height: 28px;
- width: 270px;
+ width: 290px;
  border-radius:18px;
  margin-bottom:28px;
  margin-left: 2%;
@@ -42,7 +42,7 @@
 }
 .bar{
     border-radius:15px;
-    height: 16px;
+    height: 19px;
     margin:1px 2px;
     position: absolute;
     box-shadow:8px 1px 8px white inset,8px 1px 8px rgb(49, 49, 49) ;
