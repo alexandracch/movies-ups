@@ -1,0 +1,51 @@
+/* Estilos del navbar superior */
+.logo-principal {
+	margin-top: 6px;
+	width: 1.5em;
+}
+
+nav {
+	position: fixed !important;
+	width: 100%;
+	z-index: 1000;
+}
+
+/* Estilos para gif de portada */
+.parallax-container {
+    height: 20em;
+}
+
+.parallax {
+    margin-top: 3em;
+}
+
+/* Estilos para el navbar inferior */
+.tab-menu-holder {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	height: 56px;
+	z-index: 9999999;
+}
+
+.tab-menu-holder  ul {
+	text-align: center;
+	width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.tab-menu-holder   li {
+	list-style: none;
+	display: inline;
+	padding: 10px 15px;
+	margin: 0 10px;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 20px;
+}
+
+.color-white{
+	color: white;
+}

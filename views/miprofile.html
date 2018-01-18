@@ -8,7 +8,7 @@
   <!-- Enlazamos nuestro framework _materialize_ -->
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/profileuser.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
   <!-- Enlazamos íconos de materialize -->
@@ -17,7 +17,6 @@
 </head>
 
 <body>
-  <!-- Barra de navegación para todas las vistas -->
   <header>
     <nav class="red darken-4">
       <div class="nav-wrapper">
@@ -131,69 +130,33 @@
     </ul>
   </header>
   <main>
-    <div class="row">
-      <div class="col s12">
-          <div class="galery">
-            <div class="video-container carousel carousel-slider">
-                <a class="carousel-item" href="#one!"><iframe width="560" height="315" src="https://www.youtube.com/embed/0mauGhW74uM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></a>
+    <!-- GIF de portada -->
+    <div class="parallax-container">
+      <div class="parallax">
+          <img alt="No me canso de verlo podría verlo 1000009999902882929 de veces y no me canso" class="_mi _25 _3w _2h" src="https://s-media-cache-ak0.pinimg.com/originals/4b/f6/b4/4bf6b47e8c809591fc4dff2162c1b5e1.gif">
+        </div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                <span class="card-title">Juan Perez</span>
+              </div>
+              <div class="card-content">
+                <p>Hi comunidad, estoy feliz de poder compartir los UP's que me ha costado tanto esfuerzo encontrar, horas de horas analizando cada escena al fin tiene su recompensa.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
-    <div class="row container-flex-row">
-      <div class="col s12 container-flex-column center-align">
-        <h4 id="title-nf"> Las chispote- UP'S de la Semana</h4>
-      </div>
-    </div>
-    <div class="row container-flex-row" id="container-movie-1">
-    </div>
-    <div class="row container-flex-row" id="container-movie-2">
-    </div>
-    <div class="row container-flex-row" id="container-movie-3">
-    </div>
-    <!-- <div class="row container-flex-row" id="container-movie-4">
-    </div> -->
   </main>
-  <!-- Modal -->
-  <div id="modal-movie" class="modal">
-    <div class="modal-content">
-      <i class="material-icons right modal-close">close</i>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="col s12 container-flex-column">
-              <!-- <img id="movie1" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
-              <h6 class=center-align id="name-movie1">Nombre Película</h6> -->
-              <table class="responsive-table centered highlight">
-                <thead>
-                  <tr>
-                    <th>Año</th>
-                    <th>Duración</th>
-                    <th>Reparto</th>
-                    <th>Género</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td id="td-year">1998</td>
-                    <td id="td-time">155mm</td>
-                    <td id="td-repart">nnnn</td>
-                    <td id="td-genre">Administración</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12  m12 l12 xl12">
-              <a class="btn display-block" id="">Ver Episodio</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- fin Modal -->
   <footer>
     <div class="tab-menu-holder red darken-4">
       <ul>
@@ -201,7 +164,7 @@
           <a href="newsfeed.html" class="color-white">
             <i class="material-icons">home</i>
           </a>
-    
+  
         </li>
         <li class="tab-item-btn col s4">
           <a href="search.html" class="color-white">
@@ -216,14 +179,13 @@
       </ul>
     </div>
   </footer>
-  <!-- Final nav -->
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../js/newsfeed.js"></script>
+  <script src="../js/profileuser.js"></script>
 </body>
 
 </html>
