@@ -1,12 +1,11 @@
-/* ESTILOS GENERALES*/
+/* Estilos generales*/
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-
-/* ESTILOS PARA LA VISTA  */
+/* Estilos para acomodar el video a responsive */
 .contenedor{
     height: 0;
     overflow: hidden;
@@ -25,25 +24,9 @@
 @media screen and (max-width: 1000px){
     .col1,
     .col2{
-        width: auto;
+     width: auto;
     }
 }
 
-/* Container for skill bars */
-.container {
-	width: 100%; /* Full width */
-	background-color: #ddd; /* Grey background */
-}
 
-.skills {
-	text-align: right; /* Right-align text */
-	padding-right: 20px; /* Add some right padding */
-	line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-	color: white; /* White text color */
-}
-
-.html {width: 90%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
 
