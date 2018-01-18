@@ -13,6 +13,8 @@ $(document).ready(function() {
   // Iniciar modal
   // $('#modal-movie0').modal();
   $('#modal-movie').modal();
+  // Inicializando slider de videos
+  $('.carousel').carousel();
 
   // Para traer la data de la API
   // Trabajaremos para el caso con las siguientes películas:
