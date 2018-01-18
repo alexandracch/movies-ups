@@ -3,11 +3,11 @@ $(document).ready(function() {
   // Initialize collapse button
   $('.button-collapse').sideNav();
   // bar
-  setInterval(function() {
-    $('#podium1').animate({'width': '0%'}).animate({'width': '90%'}, 1000)
-      .delay(7000).animate({'opacity': '0'}, 1000)
-      .animate({'width': '0%'}).animate({'opacity': '1'});
-  }, 100);
+  // setInterval(function() {
+  //   $('#podium1').animate({ 'width': '0%' }).animate({ 'width': accountant}, 1000)
+  //     .delay(7000).animate({'opacity': '0'}, 1000)
+  //     .animate({'width': '0%'}).animate({'opacity': '1'});
+  // }, 100);
   setInterval(function() {
     $('#podium2').animate({ 'width': '0%' }).animate({ 'width': '75%' }, 1000)
       .delay(7000).animate({ 'opacity': '0' }, 1000)
@@ -58,18 +58,31 @@ $(document).ready(function() {
       message: textArea.val()
     });
     $('#area').val('');
-    commented.find('.message-box').length;
-    console.log(commented.find('.message-box').length)
+    var accountant = commented.find('.message-box').length;
+    
+    var accountantPor = (accountant + '%');
+    console.log(accountantPor);
+    if (accountant) {
+      setInterval(function() {
+        $('#podium1').animate({ 'width': '0%' }).animate({ 'width': '10%' }, 1000)
+          .delay(7000).animate({ 'opacity': '0' }, 1000)
+          .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
+      }, 100);
+    }
+    
+    // setInterval(function () {
+    //   $('#podium1').animate({ 'width': '0%' }).animate({ 'width': 79% }, 1000)
+    //     .delay(7000).animate({ 'opacity': '0' }, 1000)
+    //     .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
+    // }, 100);
+      
+      // var array = ['pera','fddd','ssss'];
+    // var  newArray = [];
+    // acum = 0;
+    // for (var i = 0; i < array.length; i++) { 
+    //   acum += array[i]; }
+    // alert(acum)
 
-
-    var array = ['pera','fddd','ssss'];
-    var  newArray = [];
-    acum = 0;
-    for (var i = 0; i < array.length; i++) { 
-      acum += array[i]; }
-    alert(acum)
 
   });
-
-  
 });
