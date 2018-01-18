@@ -11,9 +11,18 @@
 	width: 1.5em;
 }
 
+nav {
+	position: fixed !important;
+	width: 100%;
+	z-index: 1000;
+}
+
+.input-newsfeed {
+	margin-top: 8em;
+}
+
 /* Estilos del navbar inferior   */
 .tab-menu-holder {
-	background: #c71f16;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
