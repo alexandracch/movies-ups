@@ -11,13 +11,18 @@
 	width: 1.5em;
 }
 
-.background-nav {
-	background-color: #c71f16;
+nav {
+	position: fixed !important;
+	width: 100%;
+	z-index: 1000;
+}
+
+.input-newsfeed {
+	margin-top: 8em;
 }
 
 /* Estilos del navbar inferior   */
 .tab-menu-holder {
-	background: #c71f16;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
@@ -73,6 +78,10 @@
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+
+.margin-top-80{
+	margin-top: 80px;
+}
 /* FÍN DE ESTILOS GENERALES */
 
 
@@ -86,34 +95,37 @@
   margin-bottom: 60px;
 }
 
-/*FÍN DE ESTILOS NEWSPEED */
-
-/* ESTILOS PARA LA VISTA WELCOME */
-/* Container for skill bars */
-.container {
-	width: 100%; /* Full width */
-	background-color: #ddd; /* Grey background */
+/* Newsfeed */
+#photo {
+	width: 50px !important;;
+	height: 50px !important;
+	background-size: cover !important;
+	border-radius: 50% !important;
 }
 
-.skills {
-	text-align: right; /* Right-align text */
-	padding-right: 20px; /* Add some right padding */
-	line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-	color: white; /* White text color */
+#background-profile {
+	background-color: #c71f16;
 }
 
-.html {width: 90%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
-
-
-
-video {
-	width: 100%;
-}* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/* Estilos para el slider de videos */
+.parallax-container {
+	height: 270px;
 }
-/* FIN ESTILOS  */
+
+.galery {
+	margin-top: 4em;
+	width: auto;
+}
+
+.video-responsive {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 56.25%;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

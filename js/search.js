@@ -17,5 +17,6 @@ $(document).ready(function() {
         $('#movie-section').append('<div class="col s12 container-flex-column"><img id="movie" src="' + posterMovie + '" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie">' + movie.Title + '</h6></div>');
       }
     });
+    $('#search').val('');
   });
 });
