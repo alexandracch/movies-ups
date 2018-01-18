@@ -18,4 +18,26 @@ $(document).ready(function() {
       .delay(7000).animate({ 'opacity': '0' }, 1000)
       .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
   }, 600);
+
+  // Crando variables 
+  var textArea = $('#area');
+  var comment = $('#button');
+  var commented = $('#visualizing');
+
+  // Validando el texArea 
+  textArea.on('keyup', function() {
+    if (textArea.val() === '') {
+      comment.attr('disabled', true);
+      comment.css({ 'background': '' });       
+    } else {
+      comment.attr('disabled', false);
+      comment.css({ 'background': 'yellow' });
+    }
+  });
+
+  // Utilizando el boton Comentar para pasar a otro contenedor
+  comment.on('click', function() {
+    commented.append(textArea.val() + '<br>');
+    $('#area').val('');
+  });
 });

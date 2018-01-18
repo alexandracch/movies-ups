@@ -28,6 +28,7 @@
  font-family: 'Joti One', cursive;
  font-size: 20px;
 }
+/* Estilos para las barras de progress */
 .podium{
  height: 28px;
  width: 290px;
@@ -56,4 +57,10 @@
 }
 .user3{
   background-color: rgb(243, 126, 105);
+}
+/* Estilos del texarea */
+
+textarea{
+  border:3px dashed rgb(223, 100, 203);
+  overflow:hidden;
 }
