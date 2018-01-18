@@ -37,7 +37,18 @@ $(document).ready(function() {
 
   // Utilizando el boton Comentar para pasar a otro contenedor
   comment.on('click', function() {
-    commented.append(textArea.val() + '<br>');
+    commented.append('<div  >' + textArea.val());
     $('#area').val('');
+    commented.find('div');
+    console.log(commented.find('div'))
+    var array = ['pera','fddd','ssss'];
+    var  newArray = [];
+    acum = 0;
+    for (var i = 0; i < array.length; i++) { 
+      acum += array[i]; }
+    alert(acum)
+
   });
+
+  
 });
