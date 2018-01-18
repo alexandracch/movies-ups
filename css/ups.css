@@ -1,69 +1,66 @@
-/* Make sure that padding behaves as expected */
-* {box-sizing:border-box}
-
-/* Container for skill bars */
-.container {
-    width: 100%; /* Full width */
-    background-color: #ddd; /* Grey background */
+/* Estilos generales*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.skills {
-    text-align: right; /* Right-align text */
-    padding-right: 20px; /* Add some right padding */
-    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-    color: white; /* White text color */
+/* Estilos para acomodar el video a responsive */
+.contenedor{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
 }
-
-.html {width: 90%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
-
-
- 
-video {
-    width: 100%;
-    height: auto;
-}* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos del navbar superior */
-.logo-principal {
-    margin-top: 6px;
-    width: 1.5em;
-}
-
-.background-nav {
-    background-color: #c71f16;
-}
-
-/* Estilos del navbar inferior   */
-.tab-menu-holder {
-    background: #c71f16;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+.contenedor iframe {
+    height: 100%;
     left: 0;
-    padding: 15px;
-    height: 56px;
-    z-index: 9999999;
-}
-
-.tab-menu-holder  ul {
-    text-align: center;
+    position: absolute;
+    top:0;
     width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
+}
+/* Estilos para el titulo */
+.ranked{
+ text-align: center;
+ font-family: 'Joti One', cursive;
+ font-size: 20px;
+}
+/* Estilos para las barras de progress */
+.podium{
+ height: 28px;
+ width: 290px;
+ border-radius:18px;
+ margin-bottom:28px;
+ margin-left: 2%;
+ box-shadow:8px 1px 8px rgb(49, 49, 49) inset,8px 1px 8px white;
+}
+.icon{
+ color: rgb(0, 255, 85);
+ font-size: 18px;
+}
+.bar{
+    border-radius:15px;
+    height: 19px;
+    margin:1px 2px;
+    position: absolute;
+    box-shadow:8px 1px 8px white inset,8px 1px 8px rgb(49, 49, 49) ;
+}
+.user1{
+  background-color: rgb(117, 168, 245);
 }
 
-.tab-menu-holder   li {
-    list-style: none;
-    display: inline;
-    padding: 10px 15px;
-    margin: 0 10px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 20px;
+.user2{
+  background-color: rgb(245, 129, 216);
+}
+.user3{
+  background-color: rgb(243, 126, 105);
+}
+/* Estilos del texarea */
+
+textarea{
+  border:3px dashed rgb(223, 100, 203);
+  overflow:hidden;
 }
