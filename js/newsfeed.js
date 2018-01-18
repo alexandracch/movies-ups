@@ -1,4 +1,28 @@
 $(document).ready(function() {
+  // Initialize Firebase
+  var config = {
+    apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
+    authDomain: 'movie-ups.firebaseapp.com',
+    databaseURL: 'https://movie-ups.firebaseio.com',
+    projectId: 'movie-ups',
+    storageBucket: 'movie-ups.appspot.com',
+    messagingSenderId: '1064902545731'
+  };
+  firebase.initializeApp(config);
+
+  // datos del usuario
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
+
+  // Boton de salida
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
+      window.location.href = 'login.html';
+      console.log('saliste');
+    });
+  });
+
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
@@ -6,9 +30,6 @@ $(document).ready(function() {
   $('.button-collapse').sideNav();
   // Iniciar modal
   $('#modal-change').modal();
-  $('#photo').attr('src', localStorage.photo);
-  $('#name').append(localStorage.name);
-  $('#email').append(localStorage.email);
 
   // Iniciar modal
   // $('#modal-movie0').modal();
@@ -72,7 +93,7 @@ $(document).ready(function() {
 
 
   function apicall(nameMovie, idImg, idNameMovie) {
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
       console.log(response);
       // arrNameMovies.push = response.Title;
       // console.log(arrNameMovies);
@@ -81,7 +102,7 @@ $(document).ready(function() {
       $(idImg).attr('src', response.Poster);
       $(idNameMovie).text(response.Title);
 
-      $('.btn-modal').on('click', function() {
+      $('.btn-modal').on('click', function () {
         console.log(response);
         $('#td-year').text(response.Year);
         $('#td-time').text(response.Runtime);
@@ -93,7 +114,7 @@ $(document).ready(function() {
     });
   };
 
-  $('#btn-reload').on('click', function() {
+  $('#btn-reload').on('click', function () {
     location.reload();
   });
 });

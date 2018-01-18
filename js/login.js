@@ -35,6 +35,7 @@ $(document).ready(function() {
       name: user.displayName, // nombre
       email: user.email, // email
       photo: user.photoURL, // foto de gmail
+      followers: 30,
     };
     firebase.database().ref('users/' + user.uid).set(myUser); // se usa el uid de usurio ára verificar que no se duplique el logeo
   }
