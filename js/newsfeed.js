@@ -31,14 +31,15 @@ $(document).ready(function() {
 
     // Initialize collapse button
     $('.button-collapse').sideNav();
+
     // Iniciar modal
     $('#modal-change').modal();
 
     // Iniciar modal
     // $('#modal-movie0').modal();
     $('#modal-movie').modal();
-    // Inicializando slider de videos
-    $('.carousel').carousel();
+    // Iniciando slider
+    $('.slider').slider();
 
     // Para traer la data de la API
     // Trabajaremos para el caso con las siguientes películas:
@@ -61,14 +62,6 @@ $(document).ready(function() {
       }
       if (i >= 6 && i < 9) {
         containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal red darken-4" href="#modal-movie">Ver Datos</a></div>');
-
-        containerMovies1.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn red darken-4 modal-trigger" href="#modal-movie">Ver Datos</a></div>');
-      }
-      if (i >= 3 && i < 6) {
-        containerMovies2.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn red darken-4 modal-trigger" href="#modal-movie">Ver Datos</a></div>');
-      }
-      if (i >= 6 && i < 9) {
-        containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn red darken-4 modal-trigger " href="#modal-movie">Ver Datos</a></div>');
       }
       // if (i >= 9 && i < 12) {
       //   containerMovies4.prepend('<div class="col s4 container-flex-column"><img id=movie' + i + ' + src="" alt="movies-API-OMDB"class="imgs-gallery responsive-img"><h6 id=name-movie' + i + ' >Nombre Película</h6>');

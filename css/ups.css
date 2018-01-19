@@ -10,7 +10,7 @@
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
-    padding-top: 30px;
+    padding-top: 300px;
     position: relative;
     padding-left: 0;
     padding-right: 0;
@@ -25,8 +25,9 @@
 /* Estilos para el titulo */
 .ranked{
  text-align: center;
- font-family: 'Joti One', cursive;
+ font-family: fantasy;
  font-size: 20px;
+ margin-bottom: 3%;
 }
 /* Estilos para las barras de progress */
 .podium{
@@ -42,7 +43,7 @@
  font-size: 18px;
 }
 .bar{
-    border-radius:15px;
+    border-radius:5px;
     height: 19px;
     margin:1px 2px;
     position: absolute;
@@ -58,9 +59,16 @@
 .user3{
   background-color: rgb(243, 126, 105);
 }
+.user3{
+  background-color: rgb(189, 224, 208);
+}
 /* Estilos del texarea */
 
 textarea{
-  border:3px dashed rgb(223, 100, 203);
+  border:3px dashed rgb(100, 205, 223);
   overflow:hidden;
 }
+.ranked-container{
+  margin-bottom: 20%;
+}
+

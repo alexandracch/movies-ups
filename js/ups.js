@@ -17,6 +17,10 @@ $(document).ready(function() {
   $('#name').append(localStorage.name);
   $('#email').append(localStorage.email);
 
+  // Colocando el nombre y foto en las barras
+  $('.one').attr('src', localStorage.photo);
+  $('.text-chip').append(localStorage.name);
+
   // Boton de salida
   $('#logout').on('click', function() {
     firebase.auth().signOut().then(function() {
@@ -46,14 +50,17 @@ $(document).ready(function() {
       comment.attr('disabled', false);
       comment.css({ 'background': 'yellow' });
     }
-  });
-
+  });  
+  
   // Utilizando el boton Comentar para pasar a otro contenedor
   comment.on('click', function() {
+
     var nameUser = localStorage.name;
-    var $messages = '<div class="col s12 box">' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="div-name"><h4></h4></div>' + '<div class="message-box"><span></span></div>' + '</div>';
-    var appenReplace = $messages.replace('<span></span>', textArea.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
-    commented.append(appenReplace + textArea.val());
+    var $messages = '<div class="col s12 box" style=" background-color: rgb(189, 224, 208);margin-top:5% " >' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="message-box"> <p></p></div>' + '</div>';
+    var appenReplace = $messages.replace('<p></p>', textArea.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name)
+    commented.append(appenReplace); 
+
+
     // guardar comentarios en firebase
     firebase.database().ref('comments').push({
       name: localStorage.name,
