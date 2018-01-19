@@ -12,6 +12,25 @@ $(document).ready(function() {
     messagingSenderId: '1064902545731'
   };
   firebase.initializeApp(config);
+  // datos del usuario
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
+
+  // Boton de salida
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
+      window.location.href = 'login.html';
+      console.log('saliste');
+    });
+  });
+
+  // Inicializamos material box
+  $('.materialboxed').materialbox();
+
+  // Initialize collapse button
+  $('.button-collapse').sideNav();
+
 
   // Crando variables 
   var textArea = $('#area');
@@ -40,21 +59,18 @@ $(document).ready(function() {
       name: localStorage.name,
       message: textArea.val()
     });
-    //limpiando el textarea
+    // limpiando el textarea
     $('#area').val('');
 
-    //Generando el contador
+    // Generando el contador
     var accountant = commented.find('.message-box').length;
     
-    //Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
+    // Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
     var accountantPor = (accountant + '%');
     console.log(accountantPor);
-    //Condicionando para que incremente la barra progresiva.
+    // Condicionando para que incremente la barra progresiva.
     if (accountant) {
-      $('.user1').css({ 'width': accountantPor  });
+      $('.user1').css({ 'width': accountantPor });
     }
-
-
-
   });
 });
