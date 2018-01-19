@@ -64,9 +64,9 @@ nav {
 
 .container-flex-column {
   display: flex;
-	flex-direction:column;
+  flex-direction:column;
   justify-content: center;
-	padding: 2em;
+  padding: 2em;
 }
 
 #search{
@@ -107,25 +107,20 @@ nav {
 	background-color: #c71f16;
 }
 
-/* Estilos para el slider de videos */
-.parallax-container {
-	height: 270px;
-}
-
+/* Estilos para el slider de gif */
 .galery {
-	margin-top: 4em;
-	width: auto;
+	margin-top: 2em;
+}
+.slider .slides {
+    background-color: transparent;
+    margin: 0;
+    height: 400px;
 }
 
-.video-responsive {
-    position: relative;
-    margin-bottom: 20px;
-    padding-top: 56.25%;
-}
-.video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.slider .slides li img {
     height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size:100% auto;
+    background-repeat: no-repeat;
 }

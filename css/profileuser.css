@@ -52,4 +52,12 @@ nav {
 
 .waves-effect , .waves-brown , .waves-ripple {
      background-color: rgba(121, 85, 72, 0.65);
-   }
+}
+
+.section {
+	margin-top: 3em;
+}
+
+.user-view a {
+	color: black;
+}
