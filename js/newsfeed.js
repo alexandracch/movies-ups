@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-$(document).ready(function () {
-=======
 
 $(document).ready(function() {
->>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -27,12 +23,9 @@ $(document).ready(function() {
       console.log('saliste');
     });
   });
-<<<<<<< HEAD
-=======
 
 
   $(document).ready(function() {
->>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
@@ -75,11 +68,7 @@ $(document).ready(function() {
     if (i >= 6 && i < 9) {
       containerMovies3.prepend(content);
       // Para las strellas.
-<<<<<<< HEAD
-      $('#raty' + i).raty({ score: 4 });
-=======
       $('#raty' + i).raty({ score: 3 });
->>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
     }
 
     apicall(i);
@@ -125,18 +114,11 @@ $(document).ready(function() {
     });
   }
 
-<<<<<<< HEAD
-  $('.btn-modal').on('click', function(e) {
-=======
   $('.btn-modal').on('click', function(event) {
->>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
     var element = $(this);
     var idItem = element.data('movie');
     console.log(idItem);
     apicallModal(idItem);
   });
-
-  // $('#btn-reload').on('click', function () {
-  //   location.reload();
-  // });
+  });
 });
