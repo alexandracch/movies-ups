@@ -40,13 +40,9 @@ Al tener 3 días para realizar muestro proyecto sabíamos que teníamos que ser 
 * Plataforma de desarrollo
     **Firebase**
 * Data
-<<<<<<< HEAD
-    **API**
-=======
     **API OMBD**
 * Iframe
     **Youtube**
->>>>>>> 250a307797509f21fb5f5b095bfd3d673e2d848a
 
 ## Prototipado
 
@@ -58,11 +54,7 @@ Al tener 3 días para realizar muestro proyecto sabíamos que teníamos que ser 
 
 ## Pruebas de Usabilidad
 
-<<<<<<< HEAD
-![img-readme](assets/img/img-readme/usabilidad.png)
-=======
 ![img-readme](assets/img/img-readme/usabilidad.png)
 
 ## Presentación 
 [Presentación](https://docs.google.com/presentation/d/1XaR5Gcv30Vlw_dLteomJvhOoMmvgzK_l4ywXXdy0SNg/edit#slide=id.g2e0f963120_0_82)
->>>>>>> 250a307797509f21fb5f5b095bfd3d673e2d848a
