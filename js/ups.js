@@ -48,7 +48,7 @@ $(document).ready(function() {
       comment.css({ 'background': '' });       
     } else {
       comment.attr('disabled', false);
-      comment.css({ 'background': 'yellow' });
+      comment.css({ 'background': '#D14736' });
     }
   });  
   
@@ -73,7 +73,7 @@ $(document).ready(function() {
     var accountant = commented.find('.message-box').length;
     
     // Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
-    var accountantPor = (accountant + '%');
+    var accountantPor = (accountant*10 + '%');
     console.log(accountantPor);
     // Condicionando para que incremente la barra progresiva.
     if (accountant) {

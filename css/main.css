@@ -64,9 +64,9 @@ nav {
 
 .container-flex-column {
   display: flex;
-	flex-direction:column;
+  flex-direction:column;
   justify-content: center;
-	padding: 2em;
+  padding: 2em;
 }
 
 #search{

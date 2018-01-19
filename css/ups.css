@@ -59,13 +59,11 @@
 .user3{
   background-color: rgb(243, 126, 105);
 }
-.user3{
-  background-color: rgb(189, 224, 208);
-}
+
 /* Estilos del texarea */
 
 textarea{
-  border:3px dashed rgb(100, 205, 223);
+ 
   overflow:hidden;
 }
 .ranked-container{
