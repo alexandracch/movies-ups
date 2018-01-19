@@ -11,6 +11,22 @@ $(document).ready(function() {
   // $('#search').on('click', function() {
     
   // });
+   // datos del usuario
+   $('#photo').attr('src', localStorage.photo);
+   $('#name').append(localStorage.name);
+   $('#email').append(localStorage.email);
+   // Iniciando parallax del gif de portada
+   $('.parallax').parallax();
+   // Initialize collapse button
+   $('.button-collapse').sideNav();
+   // Boton de salida
+    // Boton de salida
+    $('#logout').on('click', function() {
+     firebase.auth().signOut().then(function() {
+       window.location.href = 'login.html';
+       console.log('saliste');
+     });
+   });
 
   buttonSearch.on('click', function() {
     $('#movie-section').empty();

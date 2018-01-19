@@ -64,3 +64,11 @@ textarea{
   border:3px dashed rgb(223, 100, 203);
   overflow:hidden;
 }
+
+
+/* Notificaciones */
+
+.ard-notification {
+  z-index: 90000;
+  margin-top: 120px;
+}

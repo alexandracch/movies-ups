@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +7,15 @@
   <!-- Enlazamos nuestro framework _materialize_ -->
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
-  <link rel="stylesheet" href="../css/profileuser.css">
+  <link rel="stylesheet" href="../css/main.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
   <!-- Enlazamos íconos de materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>UP'S</title>
 </head>
-
 <body>
+  <!-- Barra de navegación para todas las vistas -->
   <header>
     <nav class="red darken-4">
       <div class="nav-wrapper">
@@ -70,7 +69,7 @@
             </div>
           </li>
           <li>
-            <a href="miprofile.html">
+            <a href="profile.html">
               <i class="material-icons">account_circle</i>Mi Perfil</a>
           </li>
           <li>
@@ -130,48 +129,25 @@
     </ul>
   </header>
   <main>
-    <!-- Añadiendo datos del peril -->
-    <div class="user-view">
-      <div class="background">
-        <img class="responsive-img" src="../assets/img/portada.jpg">
-      </div>
-      <a href="#!user" id="photobody">
-      </a>
-      <a href="#!name">
-        <span class="white-text name" id="name"></span>
-      </a>
-      <a href="#!email">
-        <span id="email" class="white-text email"></span>
-      </a>
-    </div>
-    <div class="card">
-      <!-- <div class="card-image">
-        <img src="images/sample-1.jpg">
-      </div> -->
-      <div class="card-content">
-        <p>Hi comunidad, estoy feliz de poder compartir los UP's que me ha costado tanto esfuerzo encontrar, horas de horas
-          analizando cada escena al fin tiene su recompensa.</p>
-      </div>
-      <div class="card-action card-tabs">
-        <a href="#">Mis UP's</a>
-        <!-- Enlazamos el boton de seguir -->
-        <!-- Scaled in -->
-        <a id="scale-demo" href="#!" class="btn-floating red darken-4 scale-transition">
-          <i class="material-icons">add</i>
-        </a>
-
-        <!-- Scaled out -->
+    <div class="row">
+      <div class="col s12">
+        <div class="margin-top-80">
+          <div class="card">
+            <img src="../assets/img/graciela.jpg" class="graciela">
+            <p class="text"><strong>Graciela Mendoza</strong> te ha seguido.</p><i class="material-icons">tag_faces</i>
+          </div>
+          <div class="card">
+                <img src="../assets/img/ivan.jpg" class="graciela">
+                <p class="text"><strong>Ivan Ayala</strong> te ha seguido.</p><i class="material-icons">tag_faces</i>
+          </div>
+          <div class="card">
+                <img src="../assets/img/giancarlo.jpg" class="graciela">
+                <p class="text"><strong>Giancarlo García</strong> te ha seguido.</p><i class="material-icons">tag_faces</i>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row container-flex-row">
-      <div class="col s12 container-flex-column center-align">
-        <h4 id="title-nf"> Las chispote- UP'S de la Semana</h4>
-      </div>
-    </div>
-    <div class="row container-flex-row" id="container-movie-1">
-    </div>
-    <div class="followuser">
-      <a href="#" class="red darken-4 btn waves-effect waves-red">Seguir</a>
+    <div class="row" id="movie-section">
     </div>
   </main>
   <footer>
@@ -181,7 +157,6 @@
           <a href="newsfeed.html" class="color-white">
             <i class="material-icons">home</i>
           </a>
-
         </li>
         <li class="tab-item-btn col s4">
           <a href="search.html" class="color-white">
@@ -189,61 +164,20 @@
           </a>
         </li>
         <li class="tab-item-btn col s4">
-          <a class="color-white" href="notifications.html" class="color-white">
+          <a href="notifications.html" class="color-white" href="notifications.html" class="color-white">
             <i class="material-icons">notifications</i>
           </a>
         </li>
       </ul>
     </div>
   </footer>
-  <!-- Modal -->
-  <div id="modal-movie" class="modal">
-    <div class="modal-content">
-      <i class="material-icons right modal-close" id="btn-reload">close</i>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="col s12 container-flex-column">
-              <img id="movie-img" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
-              <h6 class=center-align id="name-movie">Nombre Película</h6>
-              <table class="responsive-table centered highlight">
-                <thead>
-                  <tr>
-                    <th>Año</th>
-                    <th>Duración</th>
-                    <th>Reparto</th>
-                    <th>Género</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td id="td-year">1998</td>
-                    <td id="td-time">155mm</td>
-                    <td id="td-repart">nnnn</td>
-                    <td id="td-genre">Administración</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12  m12 l12 xl12">
-              <a class="btn display-block" id="btn-ver-episodio" href="ups.html">Ver Episodio</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- fin Modal -->
+  <!-- Final nav -->
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../vendors/lib-raty/jquery.raty.js"></script>
-  <script src="../js/profileuser.js"></script>
+  <script src="../js/search.js"></script>
 </body>
-
 </html>

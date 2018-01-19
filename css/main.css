@@ -139,3 +139,25 @@ nav {
 .margin-bottom{
   margin-bottom: 60px;
 }
+
+/* notification */
+
+/* Notificaciones */
+
+.text {
+	display: inline-block;
+	padding-bottom: 12px;
+}
+
+.graciela {
+	width:30px; 
+	height:30px;
+	margin-top: 12px;
+	margin-left: 12px;
+	margin-right: 12px;
+	border-radius: 50px;
+}
+
+.card {
+	background-color: rgb(221, 221, 221);
+}
