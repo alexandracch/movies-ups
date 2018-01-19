@@ -1,5 +1,10 @@
 var arrMovies = ['Gladiator', 'Braveheart', 'Django Unchained', 'Deadpool', 'Game of Thrones', 'Twilight', 'Batman', 'knowing', 'Iron Man'];
 $(document).ready(function() {
+  // Initialize collapse button
+  $('.button-collapse').sideNav();
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
   var movieSection = $('#movie-section');
   var buttonSearch = $('#button-search');
 

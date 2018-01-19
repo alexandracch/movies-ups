@@ -1,7 +1,11 @@
 $(document).ready(function() {
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
 
   console.log(localStorage.nameMovie);
   $('#name-movie').text(localStorage.nameMovie);
+  $('#img-user1').attr('src', localStorage.photo);
 
   // Boton de salida
   $('#logout').on('click', function() {
@@ -88,6 +92,17 @@ $(document).ready(function() {
     var appenReplace = $comments.replace('<span></span>', $input.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
     $input.val('');
     $('#comments').prepend(appenReplace);
+    // contador de comentarios
+    var countComment = $('#comments').find('.box').length;
+    console.log(countComment);
+
+    // Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
+    var accountantPor = (countComment * 10 + '%');
+    console.log(accountantPor);
+    console.log(typeof(accountantPor));
+    // Condicionando para que incremente la barra progresiva.
+    $('#determinate1').attr('style', 'width:' + accountantPor);
+    
 
     // guardar comentarios en firebase
     firebase.database().ref('comments').push({
@@ -110,7 +125,7 @@ $(document).ready(function() {
     }
   });
 
-  firebase.database().ref('users').child(localStorage.uid).once('value').then(function (snapshot) {
+  firebase.database().ref('users').child(localStorage.uid).once('value').then(function(snapshot) {
     var Postarray = snapshot.val();
     var keys = Object.keys(Postarray);
     for (var i = 0; i < keys.length; i++) {
@@ -120,5 +135,5 @@ $(document).ready(function() {
     }
   });
 
-  // traer los comentarios anteriores del usuario
+  
 });

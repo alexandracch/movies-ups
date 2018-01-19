@@ -20,8 +20,8 @@ $(document).ready(function() {
   // Initialize collapse button
   $('.button-collapse').sideNav();
   // Boton de salida
-   // Boton de salida
-   $('#logout').on('click', function() {
+  // Boton de salida
+  $('#logout').on('click', function() {
     firebase.auth().signOut().then(function() {
       window.location.href = 'login.html';
       console.log('saliste');
