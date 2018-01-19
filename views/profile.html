@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Enlazamos nuestro framework _materialize_ -->
+  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <!-- Enlazamos nuestra hoja de estilo css -->
+  <link rel="stylesheet" href="../css/profile.css">
+  <!-- Enlazamos nuestro logo -->
+  <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
+  <!-- Enlazamos íconos de materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>UP'S</title>
+</head>
+
+<body>
+    <header>
+      <nav class="red darken-4">
+        <div class="nav-wrapper">
+          <!-- Añadimos nuestro logo -->
+          <div class="div-logo">
+            <a href="newsfeed.html" class="brand-logo font-logo" id="font-screen">
+              <img src="../assets/img/img-logo/logo-title.png" class="responsive-img logo-principal" alt="">
+            </a>
+          </div>
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="start.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mi Perfil">
+                <i class="material-icons">account_circle</i>
+              </a>
+            </li>
+            <li>
+              <a href="members.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mis Amigos">
+                <i class="material-icons">supervisor_account</i>
+              </a>
+            </li>
+            <li>
+              <a href="notifications.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ajustes">
+                <i class="material-icons">build</i>
+              </a>
+            </li>
+            <li>
+              <a href="primary.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cerrar Sesión">
+                <i class="material-icons">power_settings_new</i>
+              </a>
+            </li>
+          </ul>
+          <!-- Enlaces de nuestro sidebar -->
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <div class="user-view">
+                <div class="background">
+                  <img src="../assets/img/portada.jpg">
+                </div>
+                <a href="#!user">
+                  <img id="photo" class="circle foto-user" src="">
+                </a>
+                <a href="#!name">
+                  <span class="white-text name" id="name"></span>
+                </a>
+                <a href="#!email">
+                  <span id="email" class="white-text email"></span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="material-icons">account_circle</i>Mi Perfil</a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="material-icons">supervisor_account</i>Seguidores</a>
+            </li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a class="subheader">
+                <i class="material-icons">build</i>Ajustes y Configuración</a>
+            </li>
+            <li>
+              <a id="logout" class="waves-effect" href="#!">
+                <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Añadimos el sidebar del perfil -->
+      <!-- Parte principal de profile -->
+      <main>
+        <section>
+          <div class="portada center-align">
+            <div class="center center-align">
+                <img id="photo-user" class="circle foto-user" src="">
+            </div>
+            <p class="name" id="name-user"></p>
+          </div>
+          <div class="profile-stats">
+            <ul>
+              <li>
+                <span>13</span>
+                <span>Following</span>
+              </li>
+              <li>
+                <span id="seguidores"></span>
+                <span>Followers</span>
+              </li>
+            </ul>
+            <a class="follow" id="follow">Follow</a>
+          </div>
+        </section>
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+                <div id="publicaciones">
+                </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- fin de profile -->
+  <footer>
+    <div class="tab-menu-holder red darken-4">
+      <ul>
+        <li class="tab-item-btn active col s4">
+          <a href="newsfeed.html" class="color-white">
+            <i class="material-icons">home</i>
+          </a>
+  
+        </li>
+        <li class="tab-item-btn col s4">
+          <a href="search.html" class="color-white">
+            <i class="material-icons">search</i>
+          </a>
+        </li>
+        <li class="tab-item-btn col s4">
+          <a class="color-white" href="notifications.html" class="color-white">
+            <i class="material-icons">notifications</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- Enlazamos la librería Jquery -->
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <!-- Enlazamos el archivo jquery de materialize -->
+  <script src="../vendors/materialize/js/materialize.min.js"></script>
+  <!-- Enlazamos nuestro archivo JS -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+
+</html>

@@ -102,3 +102,145 @@ nav {
 #background-profile {
 	background-color: #c71f16;
 }
+
+/* UP'S */
+
+#slider-p {
+	background-color: white;
+	height: 210px !important;
+}
+
+#slides-p {
+	background-color: white;
+	height: 210px !important;
+}
+
+/* comentarios (ups) */
+
+.user-img {
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	border-radius: 50%;
+  }
+  
+  .tab-menu-holder-2 .z-depth-2 {
+   margin-top: -20px;
+  }
+  .chat {
+	margin-top: -20vh;
+	margin-left: 3vh;
+	margin-right: 3vh;
+	padding-bottom: 12vh;
+	color: black;
+  }
+	
+  .white2 {
+	font-size: 1.2em;
+	padding: 2vh;
+	background-color: rgb(255, 255, 255);
+  }
+	
+  .flex-container {
+	display: flex;
+	flex-direction: column-reverse;
+  }
+  .white {
+	color: rgb(0, 0, 0);
+	width: 100%;
+	background-color: white;
+  }
+	
+  .tab-menu-holder-2 {
+	font-size: 18px;
+	background: white;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: rgb(0, 0, 0);
+	padding: 2vh;
+  }
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+		width: 70%;
+  }
+  
+  .btn-color {
+	  background-color:#c71f16;
+  }
+	
+  .message-box {
+	background-color: rgb(230, 230, 230);
+	padding: 2vh;
+	border-radius: 9px;
+  }
+	
+  ul {
+	  text-decoration: none;
+  }
+	
+  .img-user {
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	border-radius: 50%;
+	background-color: #c71f16;
+  }
+	
+  .box {
+	margin-top: 1vh;
+	margin-right: 5vh;
+	margin-left: 5vh;
+	margin-bottom: 6vh;
+  }
+
+
+  /* rating(ups) */
+
+  /* Estilos para el titulo */
+.ranked{
+	text-align: center;
+	font-family: fantasy;
+	font-size: 20px;
+	margin-bottom: 3%;
+   }
+   /* Estilos para las barras de progress */
+   .podium{
+	height: 28px;
+	width: 290px;
+	border-radius:18px;
+	margin-bottom:28px;
+	margin-left: 2%;
+	box-shadow:8px 1px 8px rgb(49, 49, 49) inset,8px 1px 8px white;
+   }
+   .icon{
+	color: rgb(0, 255, 85);
+	font-size: 18px;
+   }
+   .bar{
+	   border-radius:5px;
+	   height: 19px;
+	   margin:1px 2px;
+	   position: absolute;
+	   box-shadow:8px 1px 8px white inset,8px 1px 8px rgb(49, 49, 49) ;
+   }
+   .user1{
+	 background-color: rgb(117, 168, 245);
+   }
+   
+   .user2{
+	 background-color: rgb(245, 129, 216);
+   }
+   .user3{
+	 background-color: rgb(243, 126, 105);
+   }
+   
+   /* Estilos del texarea */
+   
+   textarea{
+	
+	 overflow:hidden;
+   }
+   .ranked-container{
+	 margin-bottom: 20%;
+   }
