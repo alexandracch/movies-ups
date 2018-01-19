@@ -74,9 +74,10 @@ nav {
 	width: 88%;
 }
 
-#title-nf{
-	margin-top: 0px;
-	margin-bottom: 0px;
+#title-nf {
+	font-family: 'Pattaya', sans-serif;
+    margin-top: 70px;
+    margin-bottom: 0px;
 }
 /* FÍN DE ESTILOS GENERALES */
 
