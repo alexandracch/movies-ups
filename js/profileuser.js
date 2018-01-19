@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  alert('hola');
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -31,6 +32,9 @@ $(document).ready(function() {
     $('.button-collapse').sideNav();
     // Iniciar modal
     $('#modal-change').modal();
+    $('#photobody').on(function() {
+      ('this').append('#photo');
+    });
   
     // Iniciar modal
     // $('#modal-movie0').modal();
