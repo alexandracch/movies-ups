@@ -1,4 +1,29 @@
 $(document).ready(function() {
+
+  console.log(localStorage.nameMovie);
+  $('#name-movie').text(localStorage.nameMovie);
+
+  // Boton de salida
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
+      window.location.href = 'login.html';
+      console.log('saliste');
+    });
+  });
+  // Inicializamos material box
+  $('.materialboxed').materialbox();
+
+  // Initialize collapse button
+  $('.button-collapse').sideNav();
+  // Iniciar modal
+  // $('#modal-change').modal();
+
+  // Iniciar modal
+  // $('#modal-movie0').modal();
+  $('#modal-movie').modal();
+  // Iniciando slider
+  $('.slider').slider();
+
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -61,21 +86,22 @@ $(document).ready(function() {
     var $inputVal = $input.val();
     var $comments = '<div class="col s12 box">' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="div-name"><h4></h4></div>' + '<div class="message-box"><span></span></div>' + '</div>';
     var appenReplace = $comments.replace('<span></span>', $input.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
-    $('#comments').append(appenReplace);
-  
+    $input.val('');
+    $('#comments').prepend(appenReplace);
+
     // guardar comentarios en firebase
     firebase.database().ref('comments').push({
       name: localStorage.name,
       message: $inputVal,
     });
-    
+
     $inputVal = $input.val('');
     // para que no se puedan volver a enviar comentarios en blanco
     if ($inputVal = $input.val('')) {
       $btnSendAttr.attr('disabled', true); // desabilita el boton
     }
   });
- 
+
   // para traer todos lo posteos que hizo
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -83,8 +109,8 @@ $(document).ready(function() {
       queryDataset(token);
     }
   });
-  
-  firebase.database().ref('users').child(localStorage.uid).once('value').then(function(snapshot) {
+
+  firebase.database().ref('users').child(localStorage.uid).once('value').then(function (snapshot) {
     var Postarray = snapshot.val();
     var keys = Object.keys(Postarray);
     for (var i = 0; i < keys.length; i++) {

@@ -55,21 +55,21 @@
           <li>
             <div class="user-view">
               <div class="background">
-                <img src="../assets/images/portada.jpg">
+                <img src="../assets/img/portada.jpg">
               </div>
               <a href="#!user">
-                <img class="circle foto-user" src="../assets/images/user.jpg">
+                <img id="photo" class="circle foto-user" src="">
               </a>
               <a href="#!name">
-                <span class="white-text name">John Doe</span>
+                <span class="white-text name" id="name"></span>
               </a>
               <a href="#!email">
-                <span class="white-text email">jdandturk@gmail.com</span>
+                <span id="email" class="white-text email"></span>
               </a>
             </div>
           </li>
           <li>
-            <a href="#!">
+            <a href="miprofile.html">
               <i class="material-icons">account_circle</i>Mi Perfil</a>
           </li>
           <li>
@@ -84,7 +84,7 @@
               <i class="material-icons">build</i>Ajustes y Configuración</a>
           </li>
           <li>
-            <a class="waves-effect" href="#!">
+            <a id="logout" class="waves-effect" href="#!">
               <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
           </li>
         </ul>
@@ -108,11 +108,11 @@
         </div>
       </li>
       <li>
-        <a href="#!">
+        <a href="profile.html">
           <i class="material-icons">account_circle</i>Mi Perfil</a>
       </li>
       <li>
-        <a href="#!">
+        <a href="#">
           <i class="material-icons">supervisor_account</i>Seguidores</a>
       </li>
       <li>
@@ -123,7 +123,7 @@
           <i class="material-icons">build</i>Ajustes y Configuración</a>
       </li>
       <li>
-        <a class="waves-effect" href="#!">
+        <a class="waves-effect" href="#">
           <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
       </li>
     </ul>
@@ -133,6 +133,12 @@
       <div class="col s12">
         <form class="margin-top-80">
           <div class="input-field">
+            <select class="browser-default" id="search-ups-movies">
+              <option value="" disabled selected>Busca la película con más movie UP´S</option>
+              <option value="1">Mango</option>
+              <option value="2">Orange</option>
+              <option value="3">Apple</option>
+            </select>
             <input id="search" type="search" required placeholder="Busca la película con más movie UP´S" class="margin-left-40">
             <label class="label-icon" for="search">
               <i class="material-icons">search</i>
@@ -167,13 +173,13 @@
       </ul>
     </div>
   </footer>
-    <!-- Final nav -->
-    <!-- Enlazamos la librería Jquery -->
-    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
-    <!-- Enlazamos el archivo jquery de materialize -->
-    <script src="../vendors/materialize/js/materialize.min.js"></script>
-    <!-- Enlazamos nuestro archivo JS -->
-    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-    <script src="../js/search.js"></script>
+  <!-- Final nav -->
+  <!-- Enlazamos la librería Jquery -->
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <!-- Enlazamos el archivo jquery de materialize -->
+  <script src="../vendors/materialize/js/materialize.min.js"></script>
+  <!-- Enlazamos nuestro archivo JS -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="../js/search.js"></script>
 </body>
 </html>

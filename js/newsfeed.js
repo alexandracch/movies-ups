@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   // Initialize Firebase
   var config = {
@@ -23,16 +22,13 @@ $(document).ready(function() {
       console.log('saliste');
     });
   });
-
-
-  $(document).ready(function() {
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
   // Initialize collapse button
   $('.button-collapse').sideNav();
   // Iniciar modal
-  $('#modal-change').modal();
+  // $('#modal-change').modal();
 
   // Iniciar modal
   // $('#modal-movie0').modal();
@@ -82,7 +78,6 @@ $(document).ready(function() {
   // , idYear, idTime, idRepart, idGenre, idNameMovie, idImgMovie
   // &apikey=a1792c9b
 
-  var arrNameMovies = [];
 
   function apicall(indexElement) {
     var idImg = 'movie' + indexElement;
@@ -91,11 +86,12 @@ $(document).ready(function() {
     console.log(' imagen ' + idImg + ' idNameMovie ' + idNameMovie + ' nameMovie ' + nameMovie);
     $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
-      arrNameMovies.push = response.Title;
-      console.log(arrNameMovies);
+      // arrNameMovies.push = response.Title;
+      // console.log(arrNameMovies);
       // console.log(idYear);
       // var name = response.Title;
       $('#' + idImg).attr('src', response.Poster);
+      console.log('#' + idImg);
       $('#' + idNameMovie).text(response.Title);
     });
     // console.log(arrNameMovies);
@@ -103,7 +99,6 @@ $(document).ready(function() {
 
   function apicallModal(indexElement) {
     var nameMovie = arrMovies[indexElement];
-
     $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       $('#movie-img').attr('src', response.Poster);
       $('#td-year').text(response.Year);
@@ -120,5 +115,9 @@ $(document).ready(function() {
     console.log(idItem);
     apicallModal(idItem);
   });
+
+  $('#btn-ver-episodio').on('click', function(event) {
+    localStorage.nameMovie = $('#name-movie').text();
+    console.log(localStorage.nameMovie);
   });
 });

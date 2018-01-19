@@ -1,10 +1,18 @@
+var arrMovies = ['Gladiator', 'Braveheart', 'Django Unchained', 'Deadpool', 'Game of Thrones', 'Twilight', 'Batman', 'knowing', 'Iron Man'];
 $(document).ready(function() {
   var movieSection = $('#movie-section');
   var buttonSearch = $('#button-search');
 
+  // $('#search').on('click', function() {
+    
+  // });
+
   buttonSearch.on('click', function() {
     $('#movie-section').empty();
     var inputMovie = $('#search').val();
+    console.log(inputMovie);
+    arrMovies.indexOf(inputMovie);
+    console.log(arrMovies.indexOf(inputMovie));
     $.getJSON('https://www.omdbapi.com/?s=' + inputMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
       for (var element in response.Search) {

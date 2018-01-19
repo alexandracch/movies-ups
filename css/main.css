@@ -112,15 +112,30 @@ nav {
 	margin-top: 2em;
 }
 .slider .slides {
-    background-color: transparent;
-    margin: 0;
-    height: 400px;
+  background-color: transparent;
+  margin: 0;
+  height: 400px;
 }
 
 .slider .slides li img {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size:100% auto;
-    background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size:100% auto;
+  background-repeat: no-repeat;
+}
+
+#btn-ver-episodio{
+  background-color: #c71f16;
+}
+
+#send{
+  background-color: #c71f16;
+}
+#text-movie{
+	text-align: justify;
+}
+
+.margin-bottom{
+  margin-bottom: 60px;
 }
