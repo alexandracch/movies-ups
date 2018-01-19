@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -16,8 +16,8 @@ $(document).ready(function () {
   $('#email').append(localStorage.email);
 
   // Boton de salida
-  $('#logout').on('click', function () {
-    firebase.auth().signOut().then(function () {
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
       window.location.href = 'login.html';
       console.log('saliste');
     });
@@ -65,7 +65,7 @@ $(document).ready(function () {
     if (i >= 6 && i < 9) {
       containerMovies3.prepend(content);
       // Para las strellas.
-      $('#raty' + i).raty({ score: 4 });
+      $('#raty' + i).raty({ score: 3 });
     }
 
     apicall(i);
@@ -86,7 +86,7 @@ $(document).ready(function () {
     var idNameMovie = 'name-movie' + indexElement;
     var nameMovie = arrMovies[indexElement];
     console.log(' imagen ' + idImg + ' idNameMovie ' + idNameMovie + ' nameMovie ' + nameMovie);
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
       arrNameMovies.push = response.Title;
       console.log(arrNameMovies);
@@ -101,7 +101,7 @@ $(document).ready(function () {
   function apicallModal(indexElement) {
     var nameMovie = arrMovies[indexElement];
 
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       $('#movie-img').attr('src', response.Poster);
       $('#td-year').text(response.Year);
       $('#td-time').text(response.Runtime);
@@ -111,7 +111,7 @@ $(document).ready(function () {
     });
   }
 
-  $('.btn-modal').on('click', function (e) {
+  $('.btn-modal').on('click', function(event) {
     var element = $(this);
     var idItem = element.data('movie');
     console.log(idItem);
@@ -121,6 +121,4 @@ $(document).ready(function () {
   // $('#btn-reload').on('click', function () {
   //   location.reload();
   // });
-
-
 });
