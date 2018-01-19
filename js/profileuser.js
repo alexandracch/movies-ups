@@ -74,7 +74,7 @@ $(document).ready(function() {
     var idNameMovie = 'name-movie' + indexElement;
     var nameMovie = arrMovies[indexElement];
     console.log(' imagen ' + idImg + ' idNameMovie ' + idNameMovie + ' nameMovie ' + nameMovie);
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
+    $.getJSON('https://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
       // arrNameMovies.push = response.Title;
       // console.log(arrNameMovies);
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
   function apicallModal(indexElement) {
     var nameMovie = arrMovies[indexElement];
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
+    $.getJSON('https://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       $('#movie-img').attr('src', response.Poster);
       $('#td-year').text(response.Year);
       $('#td-time').text(response.Runtime);
