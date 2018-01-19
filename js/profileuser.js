@@ -15,6 +15,9 @@ $(document).ready(function() {
   $('#photo').attr('src', localStorage.photo);
   $('#name').append(localStorage.name);
   $('#email').append(localStorage.email);
+
+  $('#photo-user').attr('src', localStorage.photo);
+  $('#name-user').append(localStorage.name);
   // Iniciando parallax del gif de portada
   $('.parallax').parallax();
   // Initialize collapse button
