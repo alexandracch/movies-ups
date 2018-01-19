@@ -73,7 +73,7 @@ $(document).ready(function() {
     var accountant = commented.find('.message-box').length;
     
     // Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
-    var accountantPor = (accountant*10 + '%');
+    var accountantPor = (accountant * 10 + '%');
     console.log(accountantPor);
     // Condicionando para que incremente la barra progresiva.
     if (accountant) {
