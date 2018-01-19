@@ -90,7 +90,7 @@ $(document).ready(function() {
       $('#movie-img').attr('src', response.Poster);
       $('#td-year').text(response.Year);
       $('#td-time').text(response.Runtime);
-      $('#td-repart').text(response.Actors);
+      // $('#td-repart').text(response.Actors);
       $('#td-genre').text(response.Genre);
       $('#name-movie').text(response.Title);
     });
