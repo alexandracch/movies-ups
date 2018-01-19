@@ -13,6 +13,7 @@
 	<link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
 	<!-- Enlazamos íconos de materialize -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
 
 	<title>UP'S</title>
 </head>
@@ -171,55 +172,52 @@
 			  <p class="movie-information">Information</p>
 			  <p class="movie-information"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est molestiae ducimus nesciunt rerum. Maiores eligendi a id expedita dolores, ut veritatis sequi neque natus aut delectus aliquid accusamus saepe. Veritatis!</p>
 			</div>
-			<div class="previous-comments">
-
+			<div id="visualizing">
 			</div>
-			<div class="card-action">
-			  <div id="comments">
-					<ul id="comments-ul">
-	  
-					</ul>
-	  
-			  </div>
-			  <div class="input-field">
-				<i class="material-icons">textsms</i>
-				<input type="text" id="autocomplete-input" class="autocomplete">
-				<button type="submit" id="send" class="btn-floating btn-color" disabled>
-				  <i class="material-icons">send</i>
-				</button>
-			  </div>
+			<div>
+				<i class="material-icons display-inline-block" >comment</i>
+				
+					<input class="display-inline-block" id="area" rows="8" cols="80">
+			
+				<button class="btn-floating btn-large waves-effect waves-light red" id="button" disabled><i class="material-icons">send</i></button>
+			</div>
 			</div>
 		  </div>
 		</div>
-	  </div>
-	  <div class="row">
+
+		    
+</div>
+	<div class="row ranked-container">
+		<div class="ranked">
+			<p><strong>¡Ranking!</strong></p>
+		</div>
 		<div class="col s12">
-		</div>
-		<h1>My Skills</h1>
-		<p>HTML</p>
-		<div class="chip">
-			<img src="../assets/img/img-logo/logo-principal.png" alt="Contact Person"> Jane Doe
-		</div>
-		<div class="container">
-			<div class="skills html user1 bar">30%</div>
-		</div>
+			<ul>
+				<div class="chip text-chip">
+					<img class="one"  src="" alt="Person">
+					<span class="icon-trophy icon"></span>
+				</div>
+				<li class=" podium"><span id="podium1" class="bar user1"></span></li>
+			
+				<div class="chip">
+					<img src="../assets/img/img-logo/logo-principal.png" alt="Person">Person 2
+					<span class="icon-award icon"></span>
+				</div>
+				<li class=" podium"><span id="podium2" class="bar user2"></span></li>
 
-		<p>CSS</p>
-		<div class="container">
-			<div class="skills css user2 bar">80%</div>
-		</div>
+				<div class="chip">
+					<img src="../assets/img/img-logo/logo-principal.png" alt="Person">Person 3
+					<span class="icon-award6 icon"></span>
+				</div>
+			   <li class=" podium"><span id="podium3" class="bar user3"></span></li>
+				
+			</ul>
 
-		<p>JavaScript</p>
-		<div class="container">
-			<div class="skills js user3 bar">65%</div>
-		</div>
 
-		<p>PHP</p>
-		<div class="container">
-			<div class="skills php">60%</div>
 		</div>
 	</div>
 </main>
+	  
 	<footer>
 		<div class="tab-menu-holder red darken-4">
 			<ul>

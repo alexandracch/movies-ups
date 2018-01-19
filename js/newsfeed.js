@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
   // Initialize Firebase
   var config = {
@@ -11,22 +10,19 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
-   //datos del usuario
-   $('#photo').attr('src', localStorage.photo);
-   $('#name').append(localStorage.name);
-   $('#email').append(localStorage.email);
+  // datos del usuario
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
    
-   //Boton de salida
+  // Boton de salida
   $('#logout').on('click', function() {
     firebase.auth().signOut().then(function() {
-    window.location.href='login.html';
-    console.log('saliste');
+      window.location.href = 'login.html';
+      console.log('saliste');
     });
   });
 
-=======
-$(document).ready(function () {
->>>>>>> 6f215aa12114e89cab7fd3242fcbc486a19fad85
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
@@ -53,7 +49,6 @@ $(document).ready(function () {
 
   for (var i = 0; i < arrMovies.length; i++) {
     if (i < 3) {
-<<<<<<< HEAD
       containerMovies1.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn red darken-4 modal-trigger" href="#modal-movie">Ver Datos</a></div>');
     }
     if (i >= 3 && i < 6) {
@@ -61,15 +56,6 @@ $(document).ready(function () {
     }
     if (i >= 6 && i < 9) {
       containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn red darken-4 modal-trigger " href="#modal-movie">Ver Datos</a></div>');
-=======
-      containerMovies1.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
-    }
-    if (i >= 3 && i < 6) {
-      containerMovies2.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
-    }
-    if (i >= 6 && i < 9) {
-      containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
->>>>>>> 6f215aa12114e89cab7fd3242fcbc486a19fad85
     }
     // if (i >= 9 && i < 12) {
     //   containerMovies4.prepend('<div class="col s4 container-flex-column"><img id=movie' + i + ' + src="" alt="movies-API-OMDB"class="imgs-gallery responsive-img"><h6 id=name-movie' + i + ' >Nombre Película</h6>');
@@ -126,10 +112,7 @@ $(document).ready(function () {
     });
   };
 
-<<<<<<< HEAD
-=======
   $('#btn-reload').on('click', function() {
     location.reload();
   });
->>>>>>> 6f215aa12114e89cab7fd3242fcbc486a19fad85
 });

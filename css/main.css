@@ -200,8 +200,8 @@ nav {
   /* Estilos para el titulo */
 .ranked{
 	text-align: center;
-	font-family: fantasy;
-	font-size: 20px;
+	font-family: 'Pattaya', sans-serif;
+	font-size: 24px;
 	margin-bottom: 3%;
    }
    /* Estilos para las barras de progress */
