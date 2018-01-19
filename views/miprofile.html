@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,15 @@
   <!-- Enlazamos nuestro framework _materialize_ -->
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/profileuser.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
   <!-- Enlazamos íconos de materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>UP'S</title>
 </head>
+
 <body>
-  <!-- Barra de navegación para todas las vistas -->
   <header>
     <nav class="red darken-4">
       <div class="nav-wrapper">
@@ -55,16 +56,16 @@
           <li>
             <div class="user-view">
               <div class="background">
-                <img src="../assets/images/portada.jpg">
+                <img src="../assets/img/portada.jpg">
               </div>
               <a href="#!user">
-                <img class="circle foto-user" src="../assets/images/user.jpg">
+                <img id="photo" class="circle foto-user" src="">
               </a>
               <a href="#!name">
-                <span class="white-text name">John Doe</span>
+                <span class="white-text name" id="name"></span>
               </a>
               <a href="#!email">
-                <span class="white-text email">jdandturk@gmail.com</span>
+                <span id="email" class="white-text email"></span>
               </a>
             </div>
           </li>
@@ -84,7 +85,7 @@
               <i class="material-icons">build</i>Ajustes y Configuración</a>
           </li>
           <li>
-            <a class="waves-effect" href="#!">
+            <a id="logout" class="waves-effect" href="#!">
               <i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
           </li>
         </ul>
@@ -129,27 +130,52 @@
     </ul>
   </header>
   <main>
-    <div class="row">
-      <div class="col s12">
-        <form class="margin-top-80">
-          <div class="input-field">
-            <select class="browser-default" id="search-ups-movies">
-              <option value="" disabled selected>Busca la película con más movie UP´S</option>
-              <option value="1">Mango</option>
-              <option value="2">Orange</option>
-              <option value="3">Apple</option>
-            </select>
-            <input id="search" type="search" required placeholder="Busca la película con más movie UP´S" class="margin-left-40">
-            <label class="label-icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <i class="material-icons">close</i>
-          </div>
-          <a class="btn display-block red darken-4" id="button-search">Buscar Película</a>
-        </form>
+    <!-- Añadiendo datos del peril -->
+    <div class="user-view">
+      <div class="background">
+        <img class="responsive-img" src="../assets/img/portada.jpg">
+      </div>
+      <a href="#!user" id="photobody">
+      </a>
+      <a href="#!name">
+        <span class="white-text name" id="name"></span>
+      </a>
+      <a href="#!email">
+        <span id="email" class="white-text email"></span>
+      </a>
+    </div>
+    <div class="card">
+      <!-- <div class="card-image">
+        <img src="images/sample-1.jpg">
+      </div> -->
+      <div class="card-content">
+        <p>Hi comunidad, estoy feliz de poder compartir los UP's que me ha costado tanto esfuerzo encontrar, horas de horas
+          analizando cada escena al fin tiene su recompensa.</p>
+      </div>
+      <div class="card-action card-tabs">
+        <a href="#">Mis UP's</a>
+        <!-- Enlazamos el boton de seguir -->
+        <!-- Scaled in -->
+        <a id="scale-demo" href="#!" class="btn-floating red darken-4 scale-transition">
+          <i class="material-icons">add</i>
+        </a>
+
+        <!-- Scaled out -->
       </div>
     </div>
-    <div class="row" id="movie-section">
+    <div class="row container-flex-row">
+      <div class="col s12 container-flex-column center-align">
+        <h4 id="title-nf"> Las chispote- UP'S de la Semana</h4>
+      </div>
+    </div>
+    <div class="row container-flex-row" id="container-movie-1">
+    </div>
+    <div class="row container-flex-row" id="container-movie-2">
+    </div>
+    <div class="row container-flex-row" id="container-movie-3">
+    </div>
+    <div class="followuser">
+      <a href="#" class="red darken-4 btn waves-effect waves-red">Seguir</a>
     </div>
   </main>
   <footer>
@@ -159,6 +185,7 @@
           <a href="newsfeed.html" class="color-white">
             <i class="material-icons">home</i>
           </a>
+
         </li>
         <li class="tab-item-btn col s4">
           <a href="search.html" class="color-white">
@@ -173,13 +200,54 @@
       </ul>
     </div>
   </footer>
-  <!-- Final nav -->
+  <!-- Modal -->
+  <div id="modal-movie" class="modal">
+    <div class="modal-content">
+      <i class="material-icons right modal-close" id="btn-reload">close</i>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="col s12 container-flex-column">
+              <img id="movie-img" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
+              <h6 class=center-align id="name-movie">Nombre Película</h6>
+              <table class="responsive-table centered highlight">
+                <thead>
+                  <tr>
+                    <th>Año</th>
+                    <th>Duración</th>
+                    <th>Reparto</th>
+                    <th>Género</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="td-year">1998</td>
+                    <td id="td-time">155mm</td>
+                    <td id="td-repart">nnnn</td>
+                    <td id="td-genre">Administración</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12  m12 l12 xl12">
+              <a class="btn display-block" id="btn-ver-episodio" href="ups.html">Ver Episodio</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- fin Modal -->
   <!-- Enlazamos la librería Jquery -->
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../js/search.js"></script>
+  <script src="../vendors/lib-raty/jquery.raty.js"></script>
+  <script src="../js/profileuser.js"></script>
 </body>
+
 </html>

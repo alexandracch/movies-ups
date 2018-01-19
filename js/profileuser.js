@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // alert('hola');
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -14,9 +15,13 @@ $(document).ready(function() {
   $('#photo').attr('src', localStorage.photo);
   $('#name').append(localStorage.name);
   $('#email').append(localStorage.email);
-
+  // Iniciando parallax del gif de portada
+  $('.parallax').parallax();
+  // Initialize collapse button
+  $('.button-collapse').sideNav();
   // Boton de salida
-  $('#logout').on('click', function() {
+   // Boton de salida
+   $('#logout').on('click', function() {
     firebase.auth().signOut().then(function() {
       window.location.href = 'login.html';
       console.log('saliste');
