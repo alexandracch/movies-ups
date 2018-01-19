@@ -12,11 +12,11 @@ nav {
 
 /* Estilos para gif de portada */
 .parallax-container {
-    height: 20em;
+  height: 20em;
 }
 
 .parallax {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 /* Estilos para el navbar inferior */
@@ -51,7 +51,7 @@ nav {
 }
 
 .waves-effect , .waves-brown , .waves-ripple {
-     background-color: rgba(121, 85, 72, 0.65);
+  background-color: rgba(121, 85, 72, 0.65);
 }
 
 .section {
@@ -60,4 +60,16 @@ nav {
 
 .user-view a {
 	color: black;
+}
+
+.block{
+	display: block !important;
+}
+
+.imgs-gallery{
+	width: 100%;
+}
+
+#container-movie-1{
+	margin-bottom: 40px !important;
 }

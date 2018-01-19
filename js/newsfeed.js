@@ -115,4 +115,9 @@ $(document).ready(function() {
     console.log(idItem);
     apicallModal(idItem);
   });
+
+  $('#btn-ver-episodio').on('click', function(event) {
+    localStorage.nameMovie = $('#name-movie').text();
+    console.log(localStorage.nameMovie);
+  });
 });

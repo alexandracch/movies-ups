@@ -49,34 +49,16 @@ $(document).ready(function() {
 
   // Seleccionamos estructura a moestrar películas en el newsfeed
   var containerMovies1 = $('#container-movie-1');
-  var containerMovies2 = $('#container-movie-2');
-  var containerMovies3 = $('#container-movie-3');
-  // var containerMovies4 = $('#container-movie-4');
 
   for (var i = 0; i < arrMovies.length; i++) {
-    var content = '<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><div id="raty' + i + '" class=""></div><a class="waves-effect waves-light btn modal-trigger btn-modal red darken-4" href="#modal-movie" data-movie="' + i + '">Ver Datos</a></div>';
+    var content = '<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><div id="raty' + i + '" class=""></div><a class="waves-effect waves-light btn modal-trigger btn-modal red darken-4 block" href="#modal-movie" data-movie="' + i + '">Ver Datos</a></div>';
 
     if (i < 3) {
       containerMovies1.prepend(content);
       // Para las strellas.
       $('#raty' + i).raty({ score: 5 });
     }
-    if (i >= 3 && i < 6) {
-      containerMovies2.prepend(content);
-      // Para las strellas.
-      $('#raty' + i).raty({ score: 4 });
-    }
-    if (i >= 6 && i < 9) {
-      containerMovies3.prepend(content);
-      // Para las strellas.
-      $('#raty' + i).raty({ score: 3 });
-    }
-
     apicall(i);
-    // if (i >= 9 && i < 12) {
-    //   containerMovies4.prepend('<div class="col s4 container-flex-column"><img id=movie' + i + ' + src="" alt="movies-API-OMDB"class="imgs-gallery responsive-img"><h6 id=name-movie' + i + ' >Nombre Película</h6>');
-    // }
-    // apicall(arrMovies[i], '#movie' + i, '#name-movie' + i, '#td-year', '#td-time', '#td-repart', '#td-genre', '#name-movie1', '#movie1');
   }
 
   // llamando API OMDB:

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,14 @@
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <!-- Enlazamos nuestra hoja de estilo css -->
   <link rel="stylesheet" href="../css/main.css">
-	<link rel="stylesheet" href="../css/ups.css">
-	<link rel="stylesheet" href="../assets/style.css">
   <!-- Enlazamos nuestro logo -->
   <link rel="shortcut icon" href="../assets/img/img-logo/logo-title.png">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/main-two.css"> -->
   <!-- Enlazamos íconos de materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>UP'S</title>
 </head>
+
 <body>
   <!-- Barra de navegación para todas las vistas -->
   <header>
@@ -133,77 +134,81 @@
   <main>
     <div class="row">
       <div class="col s12">
-          <div class="galery">
-            <div class="slider">
-              <ul class="slides">
-                <li>
-                  <img alt="" class="_mi _25 _3w _2h responsive-img" src="https://s-media-cache-ak0.pinimg.com/originals/4b/f6/b4/4bf6b47e8c809591fc4dff2162c1b5e1.gif">
-                </li>
-                <li>
-                  <img alt="harry potter gif - Buscar con Google" class="_mi _25 _3w _2h responsive-img" src="https://s-media-cache-ak0.pinimg.com/originals/08/6a/26/086a26155efc25a7dd5ee7cb5a3682d3.gif">
-                </li>
-                <li>
-                  <img alt="." class="_mi _25 _3w _2h responsive-img" src="https://s-media-cache-ak0.pinimg.com/originals/1e/36/6d/1e366de895f5a069dcb4d8e06c03400f.jpg">
-                </li>
+        <div class="card">
+          <div class="card-image">
+            <div class="contenedor">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/gCxfClQUvCc" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <!-- <img src="../assets/img/descarga.JPG" class="img-responsive" style="width: 50vh; height: 40vh !important;"> -->
+            <span class="card-title" id="name-movie">Movie Name</span>
+          </div>
+          <div class="card-content">
+            <p class="movie-information">Information</p>
+            <p class="movie-information" id="text-movie"> Todos Presten Atencion, En El Error De La Guerra De las Galaxia, En Donde Tienen Al Hombre ahorcado y Sale El
+              Simbolo No Es Un Error, Te Enseñare Que Hay Dos Cilindros Blancos Y En La Partederecha En Donde Se Muetra A
+              Ambos A Medio Lado, En El primer Cilindro Se Ve El Simbolo Y La Segunda Toma En La Izquierda En Donde tu Señalas
+              Que Es Un Error, No Fue Asi porque fue una toma donde graban en la parte de atras del malo sosteniendo en el
+              cuello al hombre y es obveo que tiene que salir el simbolo izquierdo﻿</p>
+          </div>
+          <div class="previous-comments">
+          </div>
+          <div class="card-action">
+            <div id="comments">
+              <ul id="comments-ul">
               </ul>
             </div>
+            <div class="input-field">
+              <i class="material-icons">textsms</i>
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <button type="submit" id="send" class="btn-floating btn-color" disabled>
+                <i class="material-icons">send</i>
+              </button>
+            </div>
           </div>
+        </div>
       </div>
     </div>
-    <div class="row container-flex-row">
-      <div class="col s12 container-flex-column center-align">
-        <h4 id="title-nf"> Las chispote- UP'S de la Semana</h4>
+    <div class="row margin-bottom">
+      <div class="col s12">
+        <h4 class="center-align">Tops UP'S aquí</h6>
       </div>
+      <div class="col s12">
+        <div class="col s2">
+          <img id="img-user1" src="../assets/img/user.jpg" alt="" class="circle responsive-img">
+          <!-- notice the "circle" class -->
+        </div>
+        <div class="col s10">
+          <div class="progress">
+            <div class="determinate" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+          <div class="col s2">
+            <img id="img-user2" src="../assets/img/user.jpg" alt="" class="circle responsive-img">
+            <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <div class="progress">
+              <div class="determinate" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+            <div class="col s2">
+              <img id="img-user2" src="../assets/img/user.jpg" alt="" class="circle responsive-img">
+              <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <div class="progress">
+                <div class="determinate" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
     </div>
-    <div class="row container-flex-row" id="container-movie-1">
-    </div>
-    <div class="row container-flex-row" id="container-movie-2">
-    </div>
-    <div class="row container-flex-row" id="container-movie-3">
-    </div>
-    <!-- <div class="row container-flex-row" id="container-movie-4">
-    </div> -->
   </main>
-  <!-- Modal -->
-  <div id="modal-movie" class="modal">
-    <div class="modal-content">
-      <i class="material-icons right modal-close" id="btn-reload">close</i>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="col s12 container-flex-column">
-              <img id="movie-img" src="" alt="movies-API-OMDB" class="imgs-gallery responsive-img">
-              <h6 class=center-align id="name-movie">Nombre Película</h6>
-              <table class="responsive-table centered highlight">
-                <thead>
-                  <tr>
-                    <th>Año</th>
-                    <th>Duración</th>
-                    <th>Reparto</th>
-                    <th>Género</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td id="td-year">1998</td>
-                    <td id="td-time">155mm</td>
-                    <td id="td-repart">nnnn</td>
-                    <td id="td-genre">Administración</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12  m12 l12 xl12">
-              <a class="btn display-block" id="btn-ver-episodio" href="ups1.html">Ver Episodio</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- fin Modal -->
   <footer>
     <div class="tab-menu-holder red darken-4">
       <ul>
@@ -211,7 +216,6 @@
           <a href="newsfeed.html" class="color-white">
             <i class="material-icons">home</i>
           </a>
-    
         </li>
         <li class="tab-item-btn col s4">
           <a href="search.html" class="color-white">
@@ -219,7 +223,7 @@
           </a>
         </li>
         <li class="tab-item-btn col s4">
-          <a class="color-white" href="#" class="color-white">
+          <a class="color-white" href="notifications.html" class="color-white">
             <i class="material-icons">notifications</i>
           </a>
         </li>
@@ -233,7 +237,7 @@
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <!-- Enlazamos nuestro archivo JS -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-  <script src="../vendors/lib-raty/jquery.raty.js"></script>
-  <script src="../js/newsfeed.js"></script>
+  <script src="../js/comments.js"></script>
 </body>
+
 </html>
