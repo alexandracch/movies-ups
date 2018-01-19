@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 $(document).ready(function () {
+=======
+
+$(document).ready(function() {
+>>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -16,12 +21,18 @@ $(document).ready(function () {
   $('#email').append(localStorage.email);
 
   // Boton de salida
-  $('#logout').on('click', function () {
-    firebase.auth().signOut().then(function () {
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
       window.location.href = 'login.html';
       console.log('saliste');
     });
   });
+<<<<<<< HEAD
+=======
+
+
+  $(document).ready(function() {
+>>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
@@ -33,8 +44,8 @@ $(document).ready(function () {
   // Iniciar modal
   // $('#modal-movie0').modal();
   $('#modal-movie').modal();
-  // Iniciando slider
-  $('.slider').slider();
+  // Inicializando slider de videos
+  $('.carousel').carousel();
 
   // Para traer la data de la API
   // Trabajaremos para el caso con las siguientes películas:
@@ -64,7 +75,11 @@ $(document).ready(function () {
     if (i >= 6 && i < 9) {
       containerMovies3.prepend(content);
       // Para las strellas.
+<<<<<<< HEAD
       $('#raty' + i).raty({ score: 4 });
+=======
+      $('#raty' + i).raty({ score: 3 });
+>>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
     }
 
     apicall(i);
@@ -85,7 +100,7 @@ $(document).ready(function () {
     var idNameMovie = 'name-movie' + indexElement;
     var nameMovie = arrMovies[indexElement];
     console.log(' imagen ' + idImg + ' idNameMovie ' + idNameMovie + ' nameMovie ' + nameMovie);
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
       arrNameMovies.push = response.Title;
       console.log(arrNameMovies);
@@ -100,7 +115,7 @@ $(document).ready(function () {
   function apicallModal(indexElement) {
     var nameMovie = arrMovies[indexElement];
 
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       $('#movie-img').attr('src', response.Poster);
       $('#td-year').text(response.Year);
       $('#td-time').text(response.Runtime);
@@ -110,7 +125,11 @@ $(document).ready(function () {
     });
   }
 
+<<<<<<< HEAD
   $('.btn-modal').on('click', function(e) {
+=======
+  $('.btn-modal').on('click', function(event) {
+>>>>>>> fd9e868d55b10dfdedbd092fa8b0d75eb7983df0
     var element = $(this);
     var idItem = element.data('movie');
     console.log(idItem);
@@ -120,6 +139,4 @@ $(document).ready(function () {
   // $('#btn-reload').on('click', function () {
   //   location.reload();
   // });
-
-
 });

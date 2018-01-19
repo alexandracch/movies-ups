@@ -19,41 +19,156 @@
 </head>
 <body>
 	<!-- Barra de navegación para todas las vistas -->
-	<header>		
+	<header>
+		<nav class="red darken-4">
+			<div class="nav-wrapper">
+				<!-- Añadimos nuestro logo -->
+				<div class="div-logo">
+					<a href="newsfeed.html" class="brand-logo font-logo" id="font-screen">
+						<img src="../assets/img/img-logo/logo-title.png" class="responsive-img logo-principal" alt="">
+					</a>
+				</div>
+				<a href="#" data-activates="mobile-demo" class="button-collapse">
+					<i class="material-icons">menu</i>
+				</a>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="start.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mi Perfil">
+							<i class="material-icons">account_circle</i>
+						</a>
+					</li>
+					<li>
+						<a href="members.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mis Amigos">
+							<i class="material-icons">supervisor_account</i>
+						</a>
+					</li>
+					<li>
+						<a href="notifications.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ajustes">
+							<i class="material-icons">build</i>
+						</a>
+					</li>
+					<li>
+						<a href="primary.html" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cerrar Sesión">
+							<i class="material-icons">power_settings_new</i>
+						</a>
+					</li>
+				</ul>
+				<!-- Enlaces de nuestro sidebar -->
+				<ul class="side-nav" id="mobile-demo">
+					<li>
+						<div class="user-view">
+							<div class="background">
+								<img src="../assets/img/portada.jpg">
+							</div>
+							<a href="#!user">
+								<img id="photo" class="circle foto-user" src="">
+							</a>
+							<a href="#!name">
+								<span class="white-text name" id="name"></span>
+							</a>
+							<a href="#!email">
+								<span id="email" class="white-text email"></span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<a href="#!">
+							<i class="material-icons">account_circle</i>Mi Perfil</a>
+					</li>
+					<li>
+						<a href="#!">
+							<i class="material-icons">supervisor_account</i>Seguidores</a>
+					</li>
+					<li>
+						<div class="divider"></div>
+					</li>
+					<li>
+						<a class="subheader">
+							<i class="material-icons">build</i>Ajustes y Configuración</a>
+					</li>
+					<li>
+						<a id="logout" class="waves-effect" href="#!">
+							<i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Añadimos el sidebar del perfil -->
+		<ul id="slide-out" class="side-nav">
+			<li>
+				<div class="user-view">
+					<div id="background-profile" class="background" class="bkg-other-color"></div>
+					<!-- Añadimos la imagen de perfil -->
+					<a href="#!user">
+						<img class="circle" src="../assets/img/user.jpg">
+					</a>
+					<a href="#name">
+						<span id="name" class="white-text name"></span>
+					</a>
+					<a href="#email">
+						<span id="email" class="white-text email"></span>
+					</a>
+				</div>
+			</li>
+			<li>
+				<a href="#!">
+					<i class="material-icons">account_circle</i>Mi Perfil</a>
+			</li>
+			<li>
+				<a href="#!">
+					<i class="material-icons">supervisor_account</i>Seguidores</a>
+			</li>
+			<li>
+				<div class="divider"></div>
+			</li>
+			<li>
+				<a class="subheader">
+					<i class="material-icons">build</i>Ajustes y Configuración</a>
+			</li>
+			<li>
+				<a class="waves-effect" href="#!">
+					<i class="material-icons">power_settings_new</i>Cerrar Sesión</a>
+			</li>
+		</ul>
 	</header>
 	<main>
 		<!-- Fullscreen permite que el video ocupe todo el espacio -->
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m12 l12">				
+				<div class="col s12 m12 l12">
 					<div class="contenedor">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/NE2Uf41Z4Cw" frameborder="0" allow="autoplay; encrypted-media"
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/gCxfClQUvCc" frameborder="0" allow="autoplay; encrypted-media"
 						 allowfullscreen></iframe>
 					</div>				
 				</div>
 			</div>
-		</div>
-		<div class="row">
+		
+	   <div class="row">
 			<div class="col s12">
 				<div>
 					<i class="material-icons">comment</i>
 					<form action="index.html" method="post">
 						<textarea id="area" rows="8" cols="80"></textarea>
-					</form>
-					<input class="buttonVacio" name="button" type="submit" id="button" value="COMENTAR" disabled>	
-				</div>
-				<div id="visualizing">
+					</form>	
 				</div>
 			</div>
-		</div>
-		<div class="row">
+		</div>	
+		  <div class="row">
+			   <div class="col s12  m12 l12 xl12">
+			    	<a class="btn display-block" id="button" disabled >Comentar</a>
+			   </div>
+		  </div>
+			<div id="visualizing">
+			</div>    
+	</div>
+		<div class="row ranked-container">
 			<div class="ranked">
 				<p>Usuarios mas ranqueados</p>
 			</div>
 			<div class="col s12">
 				<ul>
-					<div class="chip">
-						<img src="../assets/img/img-logo/logo-principal.png" alt="Person">rosita
+					<div class="chip text-chip">
+						<img class="one"  src="" alt="Person">
 						<span class="icon-trophy icon"></span>
 					</div>
 					<li class=" podium"><span id="podium1" class="bar user1"></span></li>
@@ -77,6 +192,26 @@
 		</div>
 	</main>
 	<footer>
+		<div class="tab-menu-holder red darken-4">
+			<ul>
+				<li class="tab-item-btn active col s4">
+					<a href="newsfeed.html" class="color-white">
+						<i class="material-icons">home</i>
+					</a>
+	
+				</li>
+				<li class="tab-item-btn col s4">
+					<a href="search.html" class="color-white">
+						<i class="material-icons">search</i>
+					</a>
+				</li>
+				<li class="tab-item-btn col s4">
+					<a class="color-white" href="notifications.html" class="color-white">
+						<i class="material-icons">notifications</i>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</footer>
 	<!-- Enlazamos la Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>

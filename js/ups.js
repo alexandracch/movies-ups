@@ -2,23 +2,6 @@ $(document).ready(function() {
   $('.slider').slider();
   // Initialize collapse button
   $('.button-collapse').sideNav();
-  // bar
-  setInterval(function() {
-    $('#podium1').animate({'width': '0%'}).animate({'width': '90%'}, 1000)
-      .delay(7000).animate({'opacity': '0'}, 1000)
-      .animate({'width': '0%'}).animate({'opacity': '1'});
-  }, 100);
-  setInterval(function() {
-    $('#podium2').animate({ 'width': '0%' }).animate({ 'width': '75%' }, 1000)
-      .delay(7000).animate({ 'opacity': '0' }, 1000)
-      .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-  }, 400);
-  setInterval(function() {
-    $('#podium3').animate({ 'width': '0%' }).animate({ 'width': '65%' }, 1000)
-      .delay(7000).animate({ 'opacity': '0' }, 1000)
-      .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-  }, 600);
-
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -29,6 +12,29 @@ $(document).ready(function() {
     messagingSenderId: '1064902545731'
   };
   firebase.initializeApp(config);
+  // datos del usuario
+  $('#photo').attr('src', localStorage.photo);
+  $('#name').append(localStorage.name);
+  $('#email').append(localStorage.email);
+
+  // Colocando el nombre y foto en las barras
+  $('.one').attr('src', localStorage.photo);
+  $('.text-chip').append(localStorage.name);
+
+  // Boton de salida
+  $('#logout').on('click', function() {
+    firebase.auth().signOut().then(function() {
+      window.location.href = 'login.html';
+      console.log('saliste');
+    });
+  });
+
+  // Inicializamos material box
+  $('.materialboxed').materialbox();
+
+  // Initialize collapse button
+  $('.button-collapse').sideNav();
+
 
   // Crando variables 
   var textArea = $('#area');
@@ -42,34 +48,36 @@ $(document).ready(function() {
       comment.css({ 'background': '' });       
     } else {
       comment.attr('disabled', false);
-      comment.css({ 'background': 'yellow' });
+      comment.css({ 'background': '#D14736' });
     }
-  });
-
+  });  
+  
   // Utilizando el boton Comentar para pasar a otro contenedor
   comment.on('click', function() {
+
     var nameUser = localStorage.name;
-    var $messages = '<div class="col s12 box">' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="div-name"><h4></h4></div>' + '<div class="message-box"><span></span></div>' + '</div>';
-    var appenReplace = $messages.replace('<span></span>', textArea.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name);
-    commented.append(appenReplace + textArea.val());
+    var $messages = '<div class="col s12 box" style=" background-color: rgb(189, 224, 208);margin-top:5% " >' + '<span>_name_<span>' + '<div class="right"><img src="_photo_"  style="width:50px; height: 50px; border-radius: 50% "></div>' + '<div class="message-box"> <p></p></div>' + '</div>';
+    var appenReplace = $messages.replace('<p></p>', textArea.val()).replace('_photo_', localStorage.photo).replace('_name_', localStorage.name)
+    commented.append(appenReplace); 
+
+
     // guardar comentarios en firebase
     firebase.database().ref('comments').push({
       name: localStorage.name,
       message: textArea.val()
     });
+    // limpiando el textarea
     $('#area').val('');
-    commented.find('.message-box').length;
-    console.log(commented.find('.message-box').length)
 
-
-    var array = ['pera','fddd' , 'ssss'];
-    var  newArray = [];
-    acum = 0;
-    for (var i = 0; i < array.length; i++) { 
-      acum += array[i]; }
-    alert(acum)
-
+    // Generando el contador
+    var accountant = commented.find('.message-box').length;
+    
+    // Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
+    var accountantPor = (accountant * 10 + '%');
+    console.log(accountantPor);
+    // Condicionando para que incremente la barra progresiva.
+    if (accountant) {
+      $('.user1').css({ 'width': accountantPor });
+    }
   });
-
-  
 });
