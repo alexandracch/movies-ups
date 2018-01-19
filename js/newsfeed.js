@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   // Initialize Firebase
   var config = {
@@ -29,7 +30,7 @@ $(document).ready(function() {
   // Initialize collapse button
   $('.button-collapse').sideNav();
   // Iniciar modal
-  $('#modal-change').modal();
+  // $('#modal-change').modal();
 
   // Iniciar modal
   // $('#modal-movie0').modal();
