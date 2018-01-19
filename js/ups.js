@@ -2,23 +2,6 @@ $(document).ready(function() {
   $('.slider').slider();
   // Initialize collapse button
   $('.button-collapse').sideNav();
-  // bar
-  // setInterval(function() {
-  //   $('#podium1').animate({ 'width': '0%' }).animate({ 'width': accountant}, 1000)
-  //     .delay(7000).animate({'opacity': '0'}, 1000)
-  //     .animate({'width': '0%'}).animate({'opacity': '1'});
-  // }, 100);
-  setInterval(function() {
-    $('#podium2').animate({ 'width': '0%' }).animate({ 'width': '75%' }, 1000)
-      .delay(7000).animate({ 'opacity': '0' }, 1000)
-      .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-  }, 400);
-  setInterval(function() {
-    $('#podium3').animate({ 'width': '0%' }).animate({ 'width': '65%' }, 1000)
-      .delay(7000).animate({ 'opacity': '0' }, 1000)
-      .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-  }, 600);
-
   // Initialize Firebase
   var config = {
     apiKey: 'AIzaSyD6hxhZ9lWlGruPqp4Pl0pFaQd__Rka7P8',
@@ -57,31 +40,20 @@ $(document).ready(function() {
       name: localStorage.name,
       message: textArea.val()
     });
+    //limpiando el textarea
     $('#area').val('');
+
+    //Generando el contador
     var accountant = commented.find('.message-box').length;
     
+    //Conviertiendo el entero a Porcentaje para que me pueda funcionar la barra
     var accountantPor = (accountant + '%');
     console.log(accountantPor);
+    //Condicionando para que incremente la barra progresiva.
     if (accountant) {
-      setInterval(function() {
-        $('#podium1').animate({ 'width': '0%' }).animate({ 'width': '10%' }, 1000)
-          .delay(7000).animate({ 'opacity': '0' }, 1000)
-          .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-      }, 100);
+      $('.user1').css({ 'width': accountantPor  });
     }
-    
-    // setInterval(function () {
-    //   $('#podium1').animate({ 'width': '0%' }).animate({ 'width': 79% }, 1000)
-    //     .delay(7000).animate({ 'opacity': '0' }, 1000)
-    //     .animate({ 'width': '0%' }).animate({ 'opacity': '1' });
-    // }, 100);
-      
-      // var array = ['pera','fddd','ssss'];
-    // var  newArray = [];
-    // acum = 0;
-    // for (var i = 0; i < array.length; i++) { 
-    //   acum += array[i]; }
-    // alert(acum)
+
 
 
   });
