@@ -22,7 +22,6 @@ $(document).ready(function() {
       console.log('saliste');
     });
   });
-
   // Inicializamos material box
   $('.materialboxed').materialbox();
 
@@ -58,6 +57,14 @@ $(document).ready(function() {
     }
     if (i >= 6 && i < 9) {
       containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal red darken-4" href="#modal-movie">Ver Datos</a></div>');
+
+      containerMovies1.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
+    }
+    if (i >= 3 && i < 6) {
+      containerMovies2.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class="materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
+    }
+    if (i >= 6 && i < 9) {
+      containerMovies3.prepend('<div class="col s4 container-flex-column"><img id="movie' + i + '" src="" alt="movies-API-OMDB" class=" materialboxed imgs-gallery responsive-img"><h6 class=center-align id="name-movie' + i + '">Nombre Película</h6><a class="waves-effect waves-light btn modal-trigger btn-modal" href="#modal-movie">Ver Datos</a></div>');
     }
     // if (i >= 9 && i < 12) {
     //   containerMovies4.prepend('<div class="col s4 container-flex-column"><img id=movie' + i + ' + src="" alt="movies-API-OMDB"class="imgs-gallery responsive-img"><h6 id=name-movie' + i + ' >Nombre Película</h6>');
@@ -93,7 +100,7 @@ $(document).ready(function() {
 
 
   function apicall(nameMovie, idImg, idNameMovie) {
-    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function (response) {
+    $.getJSON('http://www.omdbapi.com/?t=' + nameMovie + '&apikey=a1792c9b').then(function(response) {
       console.log(response);
       // arrNameMovies.push = response.Title;
       // console.log(arrNameMovies);
@@ -102,7 +109,7 @@ $(document).ready(function() {
       $(idImg).attr('src', response.Poster);
       $(idNameMovie).text(response.Title);
 
-      $('.btn-modal').on('click', function () {
+      $('.btn-modal').on('click', function() {
         console.log(response);
         $('#td-year').text(response.Year);
         $('#td-time').text(response.Runtime);
@@ -113,8 +120,10 @@ $(document).ready(function() {
       });
     });
   };
-
-  $('#btn-reload').on('click', function () {
+  $('#btn-reload').on('click', function() {
+    location.reload();
+  });
+  $('#btn-reload').on('click', function() {
     location.reload();
   });
 });

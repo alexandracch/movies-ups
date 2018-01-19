@@ -1,11 +1,11 @@
-/* body {
-    background-image: url('../assets/img/fondo.JPG');
+body {
+    background-image: url('../assets/img/gif/background.gif');
     width: 100vw;
-    height: 40vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-} */
+}
 
 *{
     margin: 0;
@@ -20,15 +20,37 @@
 .button-div {
     margin-top: 10vh;
 }
-/* Welcome */
+
+.gray{
+ border-radius: 9px;
+ padding-bottom: 100px;
+ margin-top: 120px;
+ margin-left: 3em;
+ margin-right: 3em;
+ width: vh;
+ height: 60vh;
+ background-color: #fff;
+}
+
+.logo {
+ margin-top: 40px;
+}
+
 .btn, .btn-large, .btn-floating {
     background-color: #D14736;
 }
 
-.welcome {
-    margin-top: 30vh;
+
+h2 {
+    font-family: 'Pattaya', sans-serif;
 }
 
-.btn-floating {
-    margin-top: 8vh;
+.btn, .btn-large, .btn-flat {
+    border-radius: 4px;
+    line-height: 36px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.login {
+    padding: 10px;
 }

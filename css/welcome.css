@@ -1,0 +1,21 @@
+/* Welcome */
+.btn, .btn-large, .btn-floating {
+    background-color: #D14736;
+}
+
+.welcome {
+    margin-top: 30vh;
+}
+
+.btn-floating {
+    margin-top: 8vh;
+}
+
+.hola {
+    color: #D14736;
+    font-family: 'Pattaya', sans-serif;
+}
+
+h5 {
+    font-family: 'Amiko', sans-serif;
+}
