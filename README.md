@@ -2,7 +2,7 @@
 
 Es una web app creada para los cinéfilos que quieren compartir aquellos errores de la industria cinematográfica que muchos no ven, y al mismo tiempo, formar parte de una comunidad donde poder compartir toda la información que durante años cuesta obtener del séptimo arte.
 
-![img-readme](assets/img/img-logo/logo-principal.png)
+![movies-ups-img](https://user-images.githubusercontent.com/32309484/36639610-2bbc8d9e-19de-11e8-9a70-34664efdae09.JPG)
 
 ## Nuestra Idea
 
@@ -46,7 +46,7 @@ Al tener 3 días para realizar muestro proyecto sabíamos que teníamos que ser 
 
 ## Prototipado
 
-1 Marvel
+### Marvel
 
 ![img-readme](assets/img/img-readme/prot1.png)
 
